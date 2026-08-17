@@ -1,0 +1,96 @@
+Title: API
+URL: https://gumroad.com/api
+Captured via browser tool (JS-rendered SPA, plain HTTP fetch returns empty shell) 2026-08-17
+Note: automated docs-path guess "developers.gumroad.com" was checked and is NOT
+Gumroad's docs -- it resolves to an unrelated personal site. Do not use.
+---
+9.6K
+Widgets
+Ping
+API
+Command line
+Introduction
+Authentication
+Scopes
+Errors
+Methods
+Products
+Public product page
+Reviews
+Categories
+Files
+Covers
+Thumbnails
+Media library
+Variant categories
+Offer codes
+Emails
+Workflows
+Custom fields
+User
+Public profile
+Refund policy
+Resource subscriptions
+Sales
+Subscribers
+Licenses
+Payouts
+Tax forms
+Earnings
+Command line
+
+Prefer a terminal? The Gumroad CLI wraps every endpoint below and is built for humans and AI agents alike.
+
+Install with Homebrew
+brew install antiwork/cli/gumroad
+Or run the install script
+curl -fsSL https://gumroad.com/install-cli.sh | bash
+
+Each endpoint below shows the matching gumroad invocation next to its cURL example. Run gumroad <command> --help for the full list of flags.
+
+The Gumroad OAuth API is based around REST. We return JSON for every request, including errors.
+
+To start using the API, you'll need to register your OAuth application. Note: The Verify License API endpoint does not require an OAuth application.
+
+After creating an application, you'll be given a unique application id and application secret.
+
+Authentication
+
+On the application page, click Generate access token to get the token you will use with the API.
+
+Scopes
+
+We've provided the following scopes that you may request when the user authorizes your application.
+
+account: full access to most API endpoints. Endpoints with a narrower security boundary, such as media, refuse an account-only token and require the specific scope noted on the endpoint.
+view_profile: read-only access to the user's public information and products.
+edit_profile: write access to the user's profile name and bio.
+edit_products: read/write access to the user's products and their variants, offer codes, custom fields, and files.
+edit_emails: read/write access to the user's audience emails and read access to the user's workflows.
+view_sales: read access to the user's products' sales information, including sales counts. This scope is also required in order to subscribe to the user's sales.
+view_payouts: read access to the user's payouts information.
+view_tax_data: read access to the user's tax forms (1099-K, 1099-MISC) and annual earnings summary.
+mark_sales_as_shipped: write access to mark the user's products' sales as shipped.
+edit_sales: write access to refund the user's products' sales and resend purchase receipts to customers.
+
+Resources
+
+Create an OAuth application - A getting started guide for creating an application with our API.
+
+omniauth-gumroad - (Ruby) an OmniAuth strategy for Gumroad OAuth.
+
+More reading
+
+If you're interested in learning more about OAuth, here are some links that might be useful:
+
+OAuth 2 spec
+Ruby OAuth2 library
+Python OAuth2 library
+PHP OAuth2 library
+API Errors
+
+Gumroad uses HTTP status codes to indicate the status of a request. Here's a run down on likely response codes.
+
+200 OK everything worked as expected.
+400 Bad Request you probably missed a required parameter.
+401 Unauthorized you did not provide a valid access token.

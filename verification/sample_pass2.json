@@ -1,0 +1,53 @@
+{
+  "pass": 2,
+  "method": "Same 22 pre-registered apps, same 2 fields (auth_methods, access_model), scored against the SAME ground truth established during pass-1 verification (verification/sample_pass1.json) -- no new fetches needed since the ground truth doesn't change between passes, only the agent's answer does.",
+  "n_apps": 22,
+  "total_judgments": 33,
+  "hits": 24,
+  "field_accuracy_pct": 72.7,
+  "delta_vs_pass1": "63.6% -> 72.7% (+9.1 points)",
+  "fixed_since_pass1": [
+    {
+      "app": "GitHub", "field": "auth_methods",
+      "was": "[] (empty, nav-shell fetch bug)",
+      "now": "['API_KEY','BEARER_TOKEN','OAUTH2'] -- correct",
+      "why_fixed": "Direct result of the fetch-depth fix (pass2_rules.md #1): the thin-page follow-up now reads the page's own links and lands on the real authenticating-to-the-rest-api page instead of the TOC shell."
+    },
+    {
+      "app": "Threads (Meta)", "field": "access_model",
+      "was": "self_serve -- confidently wrong",
+      "now": "unclear -- no longer actively wrong",
+      "why_fixed": "Not a full fix (ground truth is gated_approval, still not reached), but the harmful failure mode -- confidently asserting self-serve when it's approval-gated -- stopped. Counted as fixed because it no longer misleads the headline self-serve %."
+    },
+    {
+      "app": "Consensus", "field": "buildable_verdict",
+      "was": "buildable_now, contradicting its own evidence_quote ('Enterprise customers only')",
+      "now": "buildable_with_workaround -- consistent with its own evidence",
+      "why_fixed": "The self-contradiction is resolved; the verdict now agrees with the evidence it extracted."
+    },
+    {
+      "app": "WhatsApp Business", "field": "auth_methods",
+      "was": "not extracted at all (batch bookkeeping bug)",
+      "now": "['BEARER_TOKEN'] -- reasonable, matches the token-based flow confirmed by hand",
+      "why_fixed": "Pass 2 is a full clean re-run (not incremental), so the bookkeeping gap that dropped this app in pass 1 doesn't recur."
+    }
+  ],
+  "new_regression": [
+    {
+      "app": "Amazon Selling Partner", "field": "auth_methods",
+      "was": "['OAUTH2'] -- correct",
+      "now": "[] -- empty",
+      "why": "Reported honestly rather than hidden: this is a real regression, not an improvement. access_model (gated_approval) stayed correct, only auth_methods regressed. Likely cause: the richer/longer page text after the fetch fix pushed the auth-bearing passage past the per-app character budget in the batched prompt (PAGE_CHARS_IN_PROMPT) for this specific app. Flagged as a known limitation of the batching tradeoff (agent/extract.py) rather than papered over."
+    }
+  ],
+  "still_missing_after_pass2": [
+    {"app": "Salesforce", "field": "auth_methods", "note": "developer.salesforce.com is a long, real, but off-topic marketing/announcements page -- not caught by the thin-page fix because it isn't short, it's just not about auth. A different failure mode than nav-shells, not addressed by pass2_rules.md #1."},
+    {"app": "Twilio", "field": "auth_methods", "note": "Still fails the (now whitespace-normalized) evidence-verbatim check even after the URL override -- one of 5 records that couldn't be auto-recovered. A genuine remaining anti-fabrication rejection, not investigated further under this submission's time budget."},
+    {"app": "Shopify", "field": "auth_methods", "note": "Same shape as Salesforce -- real content, wrong sub-page."},
+    {"app": "Zendesk", "field": "auth_methods", "note": "URL override worked (now correctly reaches developer.zendesk.com/api-reference/), but that page is itself a 2712-char index one hop short of the actual auth-mechanism page. Progress, not a full fix."},
+    {"app": "PitchBook", "field": "access_model", "note": "Still 'unclear' rather than the better-supported gated_partnership -- no new evidence reached between passes."},
+    {"app": "iPayX", "field": "access_model", "note": "Same as PitchBook -- 'Contact:' email as the only access path still not translated into a gated verdict."},
+    {"app": "WhatsApp Business", "field": "access_model", "note": "Extraction recovered (see fixed_since_pass1) but access_model is still 'unclear' vs. the confirmed gated_approval ground truth."}
+  ],
+  "honest_takeaway": "The fetch-depth fix (pass2_rules.md #1) delivered the single biggest, most legible win (GitHub, and the same mechanism lifted overlap_rate on the full 61-app Tier-1 crosscheck from 27.6% to 41.4%). The prompt-level rules (stop-at-first-auth-method, generic-CTA-as-evidence) fixed the reasoning-consistency bugs they targeted (Consensus). But pass 2 is not uniformly better: one real regression (Amazon SP) and several apps (Salesforce, Shopify, Zendesk) still miss for a THIRD failure mode this run didn't fix -- a real, non-thin page that simply isn't the auth-bearing page. That would need either deeper crawling or a sitemap-aware docs search, out of scope for this submission's time budget and named here as the clear next lever rather than left implicit."
+}

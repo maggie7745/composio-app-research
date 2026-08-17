@@ -1,0 +1,1904 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Composio App Research — 100 Apps</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { background:#0b0f17; color:#e2e8f0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
+  ::-webkit-scrollbar { height:8px; width:8px; }
+  ::-webkit-scrollbar-thumb { background:#334155; border-radius:4px; }
+</style>
+</head>
+<body class="max-w-6xl mx-auto px-4 md:px-8 py-10">
+
+  <header class="mb-10">
+    <div class="text-xs uppercase tracking-widest text-sky-400 mb-2">Composio take-home · AI Product Ops Intern</div>
+    <h1 class="text-3xl md:text-4xl font-bold text-white mb-3">Researching 100 apps for agent-toolkit buildability</h1>
+    <p class="text-slate-400 max-w-3xl">100 apps across 10 categories, researched by an agent pipeline (not by hand), cross-checked against Composio's own toolkit registry, and hand-verified on a stratified sample. Generated 2026-08-17 · Pass 2 shown below.</p>
+  </header>
+
+  <!-- PATTERNS HEADLINE -->
+  <section class="mb-12">
+    <h2 class="text-lg font-semibold text-white mb-4 flex items-center gap-2"><span class="text-sky-400">01</span> The patterns</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+      <div class="rounded-lg border border-slate-800 p-4">
+        <div class="text-xs text-slate-500 uppercase tracking-wide">Dominant auth</div>
+        <div class="text-2xl font-bold text-white">API_KEY</div>
+        <div class="text-xs text-slate-500">25 of 100 apps</div>
+      </div>
+      <div class="rounded-lg border border-slate-800 p-4">
+        <div class="text-xs text-slate-500 uppercase tracking-wide">Self-serve overall</div>
+        <div class="text-2xl font-bold text-emerald-400">35.0%</div>
+      </div>
+      <div class="rounded-lg border border-slate-800 p-4">
+        <div class="text-xs text-slate-500 uppercase tracking-wide">Gated overall</div>
+        <div class="text-2xl font-bold text-amber-400">4.0%</div>
+      </div>
+      <div class="rounded-lg border border-slate-800 p-4">
+        <div class="text-xs text-slate-500 uppercase tracking-wide">Easy wins today</div>
+        <div class="text-2xl font-bold text-white">28</div>
+        <div class="text-xs text-slate-500">self-serve + buildable now</div>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-sm font-semibold text-slate-300 mb-2">Auth method distribution</h3>
+        <div class="space-y-1.5">
+        <div class="flex items-center gap-2 text-sm">
+          <div class="w-28 text-slate-400 text-xs">API_KEY</div>
+          <div class="flex-1 bg-slate-800 rounded h-4 overflow-hidden">
+            <div class="bg-sky-500 h-4" style="width:25%"></div>
+          </div>
+          <div class="w-10 text-right text-xs text-slate-400 font-mono">25</div>
+        </div>
+        <div class="flex items-center gap-2 text-sm">
+          <div class="w-28 text-slate-400 text-xs">OAUTH2</div>
+          <div class="flex-1 bg-slate-800 rounded h-4 overflow-hidden">
+            <div class="bg-sky-500 h-4" style="width:21%"></div>
+          </div>
+          <div class="w-10 text-right text-xs text-slate-400 font-mono">21</div>
+        </div>
+        <div class="flex items-center gap-2 text-sm">
+          <div class="w-28 text-slate-400 text-xs">BEARER_TOKEN</div>
+          <div class="flex-1 bg-slate-800 rounded h-4 overflow-hidden">
+            <div class="bg-sky-500 h-4" style="width:13%"></div>
+          </div>
+          <div class="w-10 text-right text-xs text-slate-400 font-mono">13</div>
+        </div>
+        <div class="flex items-center gap-2 text-sm">
+          <div class="w-28 text-slate-400 text-xs">BASIC</div>
+          <div class="flex-1 bg-slate-800 rounded h-4 overflow-hidden">
+            <div class="bg-sky-500 h-4" style="width:2%"></div>
+          </div>
+          <div class="w-10 text-right text-xs text-slate-400 font-mono">2</div>
+        </div></div>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold text-slate-300 mb-2">Self-serve % by category</h3>
+        <table class="w-full text-sm"><tbody>
+        <tr class="border-b border-slate-800">
+          <td class="px-3 py-1.5 text-slate-200">Marketing, Ads, Email and Social</td>
+          <td class="px-3 py-1.5 text-right font-mono">50.0%</td>
+          <td class="px-3 py-1.5 text-right text-slate-400 font-mono text-xs">5/10</td>
+        </tr>
+        <tr class="border-b border-slate-800">
+          <td class="px-3 py-1.5 text-slate-200">Data, SEO and Scraping</td>
+          <td class="px-3 py-1.5 text-right font-mono">50.0%</td>
+          <td class="px-3 py-1.5 text-right text-slate-400 font-mono text-xs">5/10</td>
+        </tr>
+        <tr class="border-b border-slate-800">
+          <td class="px-3 py-1.5 text-slate-200">Developer, Infra and Data platforms</td>
+          <td class="px-3 py-1.5 text-right font-mono">50.0%</td>
+          <td class="px-3 py-1.5 text-right text-slate-400 font-mono text-xs">5/10</td>
+        </tr>
+        <tr class="border-b border-slate-800">
+          <td class="px-3 py-1.5 text-slate-200">Productivity and Project Management</td>
+          <td class="px-3 py-1.5 text-right font-mono">50.0%</td>
+          <td class="px-3 py-1.5 text-right text-slate-400 font-mono text-xs">5/10</td>
+        </tr>
+        <tr class="border-b border-slate-800">
+          <td class="px-3 py-1.5 text-slate-200">CRM and Sales</td>
+          <td class="px-3 py-1.5 text-right font-mono">30.0%</td>
+          <td class="px-3 py-1.5 text-right text-slate-400 font-mono text-xs">3/10</td>
+        </tr>
+        <tr class="border-b border-slate-800">
+          <td class="px-3 py-1.5 text-slate-200">Ecommerce</td>
+          <td class="px-3 py-1.5 text-right font-mono">30.0%</td>
+          <td class="px-3 py-1.5 text-right text-slate-400 font-mono text-xs">3/10</td>
+        </tr>
+        <tr class="border-b border-slate-800">
+          <td class="px-3 py-1.5 text-slate-200">Finance and Fintech</td>
+          <td class="px-3 py-1.5 text-right font-mono">30.0%</td>
+          <td class="px-3 py-1.5 text-right text-slate-400 font-mono text-xs">3/10</td>
+        </tr>
+        <tr class="border-b border-slate-800">
+          <td class="px-3 py-1.5 text-slate-200">AI, Research and Media-native</td>
+          <td class="px-3 py-1.5 text-right font-mono">30.0%</td>
+          <td class="px-3 py-1.5 text-right text-slate-400 font-mono text-xs">3/10</td>
+        </tr>
+        <tr class="border-b border-slate-800">
+          <td class="px-3 py-1.5 text-slate-200">Communications and Messaging</td>
+          <td class="px-3 py-1.5 text-right font-mono">20.0%</td>
+          <td class="px-3 py-1.5 text-right text-slate-400 font-mono text-xs">2/10</td>
+        </tr>
+        <tr class="border-b border-slate-800">
+          <td class="px-3 py-1.5 text-slate-200">Support and Helpdesk</td>
+          <td class="px-3 py-1.5 text-right font-mono">10.0%</td>
+          <td class="px-3 py-1.5 text-right text-slate-400 font-mono text-xs">1/10</td>
+        </tr></tbody></table>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-6">
+      <div>
+        <h3 class="text-sm font-semibold text-slate-300 mb-2">Blocker taxonomy (when not self-serve)</h3>
+        <table class="w-full text-sm"><tbody>
+        <tr class="border-b border-slate-800">
+          <td class="px-3 py-1.5 text-slate-200">other unclassified</td>
+          <td class="px-3 py-1.5 text-right font-mono">48</td>
+        </tr>
+        <tr class="border-b border-slate-800">
+          <td class="px-3 py-1.5 text-slate-200">none or not applicable</td>
+          <td class="px-3 py-1.5 text-right font-mono">39</td>
+        </tr>
+        <tr class="border-b border-slate-800">
+          <td class="px-3 py-1.5 text-slate-200">no public docs</td>
+          <td class="px-3 py-1.5 text-right font-mono">10</td>
+        </tr>
+        <tr class="border-b border-slate-800">
+          <td class="px-3 py-1.5 text-slate-200">fetch or evidence failure</td>
+          <td class="px-3 py-1.5 text-right font-mono">2</td>
+        </tr>
+        <tr class="border-b border-slate-800">
+          <td class="px-3 py-1.5 text-slate-200">paid plan required</td>
+          <td class="px-3 py-1.5 text-right font-mono">1</td>
+        </tr></tbody></table>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold text-emerald-300 mb-2">Easy wins (28)</h3>
+        <ul class="text-sm max-h-64 overflow-y-auto pr-2"><li class="py-1"><span class="font-medium text-slate-100">Asana</span> <span class="text-slate-500 text-xs">— Productivity and Project Management</span></li><li class="py-1"><span class="font-medium text-slate-100">BigCommerce</span> <span class="text-slate-500 text-xs">— Ecommerce</span></li><li class="py-1"><span class="font-medium text-slate-100">Bright Data</span> <span class="text-slate-500 text-xs">— Data, SEO and Scraping</span></li><li class="py-1"><span class="font-medium text-slate-100">ClickUp</span> <span class="text-slate-500 text-xs">— Productivity and Project Management</span></li><li class="py-1"><span class="font-medium text-slate-100">Close</span> <span class="text-slate-500 text-xs">— CRM and Sales</span></li><li class="py-1"><span class="font-medium text-slate-100">Cloudflare</span> <span class="text-slate-500 text-xs">— Developer, Infra and Data platforms</span></li><li class="py-1"><span class="font-medium text-slate-100">DataForSEO</span> <span class="text-slate-500 text-xs">— Data, SEO and Scraping</span></li><li class="py-1"><span class="font-medium text-slate-100">Discord</span> <span class="text-slate-500 text-xs">— Communications and Messaging</span></li><li class="py-1"><span class="font-medium text-slate-100">Firecrawl</span> <span class="text-slate-500 text-xs">— Data, SEO and Scraping</span></li><li class="py-1"><span class="font-medium text-slate-100">GitHub</span> <span class="text-slate-500 text-xs">— Developer, Infra and Data platforms</span></li><li class="py-1"><span class="font-medium text-slate-100">GoHighLevel</span> <span class="text-slate-500 text-xs">— Marketing, Ads, Email and Social</span></li><li class="py-1"><span class="font-medium text-slate-100">Grain</span> <span class="text-slate-500 text-xs">— AI, Research and Media-native</span></li><li class="py-1"><span class="font-medium text-slate-100">Gumroad</span> <span class="text-slate-500 text-xs">— Ecommerce</span></li><li class="py-1"><span class="font-medium text-slate-100">Intercom</span> <span class="text-slate-500 text-xs">— Support and Helpdesk</span></li><li class="py-1"><span class="font-medium text-slate-100">Mailchimp</span> <span class="text-slate-500 text-xs">— Marketing, Ads, Email and Social</span></li><li class="py-1"><span class="font-medium text-slate-100">Meta Ads</span> <span class="text-slate-500 text-xs">— Marketing, Ads, Email and Social</span></li><li class="py-1"><span class="font-medium text-slate-100">Monday.com</span> <span class="text-slate-500 text-xs">— Productivity and Project Management</span></li><li class="py-1"><span class="font-medium text-slate-100">MrScraper</span> <span class="text-slate-500 text-xs">— Data, SEO and Scraping</span></li><li class="py-1"><span class="font-medium text-slate-100">Neo4j</span> <span class="text-slate-500 text-xs">— Developer, Infra and Data platforms</span></li><li class="py-1"><span class="font-medium text-slate-100">Netlify</span> <span class="text-slate-500 text-xs">— Developer, Infra and Data platforms</span></li></ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold text-amber-300 mb-2">Needs outreach (4)</h3>
+        <ul class="text-sm max-h-64 overflow-y-auto pr-2"><li class="py-1"><span class="font-medium text-slate-100">Ahrefs</span> <span class="text-slate-500 text-xs">— Data, SEO and Scraping · paid plan required</span></li><li class="py-1"><span class="font-medium text-slate-100">Aircall</span> <span class="text-slate-500 text-xs">— Communications and Messaging · other unclassified</span></li><li class="py-1"><span class="font-medium text-slate-100">Amazon Selling Partner</span> <span class="text-slate-500 text-xs">— Ecommerce · other unclassified</span></li><li class="py-1"><span class="font-medium text-slate-100">Pinterest</span> <span class="text-slate-500 text-xs">— Marketing, Ads, Email and Social · other unclassified</span></li></ul>
+      </div>
+    </div>
+
+    <div class="mt-6 rounded-lg border border-slate-800 p-4 text-sm text-slate-400">
+      <span class="text-slate-200 font-medium">Composio cross-reference:</span>
+      of the 28 "easy win" apps this research flags as self-serve + buildable now,
+      22 already have a Composio toolkit — validating those verdicts against
+      Composio's own shipped decisions. The remaining 6 are apps that look buildable but Composio hasn't covered yet:
+      <ul class="list-disc list-inside mt-2 columns-2 md:columns-3 text-xs"><li>BigCommerce</li><li>Grain</li><li>Netlify</li><li>SE Ranking</li><li>higgsfield</li><li>systeme.io</li></ul>
+    </div>
+  </section>
+
+  <!-- FINDINGS TABLE -->
+  <section class="mb-12">
+    <h2 class="text-lg font-semibold text-white mb-4 flex items-center gap-2"><span class="text-sky-400">02</span> The findings — all 100 apps</h2>
+    <div class="flex flex-wrap gap-2 mb-3">
+      <input id="search" placeholder="Search app…" class="bg-slate-900 border border-slate-700 rounded px-3 py-1.5 text-sm w-48">
+      <select id="f-category" class="bg-slate-900 border border-slate-700 rounded px-2 py-1.5 text-sm"><option value="">All categories</option></select>
+      <select id="f-access" class="bg-slate-900 border border-slate-700 rounded px-2 py-1.5 text-sm">
+        <option value="">All access models</option>
+        <option value="self_serve">self_serve</option><option value="gated_paid">gated_paid</option>
+        <option value="gated_approval">gated_approval</option><option value="gated_partnership">gated_partnership</option>
+        <option value="unclear">unclear</option>
+      </select>
+      <select id="f-buildable" class="bg-slate-900 border border-slate-700 rounded px-2 py-1.5 text-sm">
+        <option value="">All buildability</option>
+        <option value="buildable_now">buildable_now</option>
+        <option value="buildable_with_workaround">buildable_with_workaround</option>
+        <option value="blocked">blocked</option>
+      </select>
+      <span id="row-count" class="text-xs text-slate-500 self-center ml-auto"></span>
+    </div>
+    <div class="overflow-x-auto rounded-lg border border-slate-800">
+      <table class="w-full text-sm" id="app-table">
+        <thead class="bg-slate-900/80 text-left text-xs text-slate-400 sticky top-0">
+          <tr>
+            <th class="px-3 py-2">App</th><th class="px-3 py-2">Category</th><th class="px-3 py-2">What it does</th>
+            <th class="px-3 py-2">Auth</th><th class="px-3 py-2">Access</th><th class="px-3 py-2">Buildable</th>
+            <th class="px-3 py-2">Composio toolkit</th><th class="px-3 py-2">Evidence</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="CRM and Sales" data-access="unclear"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="salesforce">
+          <td class="px-3 py-2 font-medium text-slate-100">Salesforce</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">CRM and Sales</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">CRM platform offering REST, Metadata, Marketing Cloud, and Commerce APIs plus AI agent tooling.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ salesforce</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developer.salesforce.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="CRM and Sales" data-access="unclear"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="hubspot">
+          <td class="px-3 py-2 font-medium text-slate-100">HubSpot</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">CRM and Sales</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">CRM and marketing platform with APIs, apps, and developer tooling for building integrations.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ hubspot</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.hubspot.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="CRM and Sales" data-access="self_serve"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="pipedrive">
+          <td class="px-3 py-2 font-medium text-slate-100">Pipedrive</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">CRM and Sales</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Sales CRM offering an API, sandbox accounts, and marketplace for building integrations.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ pipedrive</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.pipedrive.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="CRM and Sales" data-access="unclear"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="attio">
+          <td class="px-3 py-2 font-medium text-slate-100">Attio</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">CRM and Sales</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Customizable CRM platform with REST API, App SDK, MCP, and SQL access for building integrations.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ attio</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.attio.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="CRM and Sales" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="twenty">
+          <td class="px-3 py-2 font-medium text-slate-100">Twenty</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">CRM and Sales</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">CRM and Sales platform; page returned only a JavaScript-required app shell with no descriptive content.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.twenty.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="CRM and Sales" data-access="unclear"
+            data-auth="—" data-buildable="unclear"
+            data-name="podio">
+          <td class="px-3 py-2 font-medium text-slate-100">Podio</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">CRM and Sales</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">—</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <span class="text-slate-600">unverified</span>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="CRM and Sales" data-access="self_serve"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="zoho crm">
+          <td class="px-3 py-2 font-medium text-slate-100">Zoho CRM</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">CRM and Sales</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Zoho&#x27;s developer platform for building CRM apps, integrations, extensions, and AI agents across Zoho products.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ zoho</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.zoho.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="CRM and Sales" data-access="self_serve"
+            data-auth="API_KEY, OAUTH2" data-buildable="buildable_now"
+            data-name="close">
+          <td class="px-3 py-2 font-medium text-slate-100">Close</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">CRM and Sales</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Sales CRM with REST API, webhooks, OAuth/API-key auth, and an MCP server for AI agents.</td>
+          <td class="px-3 py-2 text-xs">API_KEY, OAUTH2</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ close</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developer.close.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="CRM and Sales" data-access="unclear"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="copper">
+          <td class="px-3 py-2 font-medium text-slate-100">Copper</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">CRM and Sales</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Copper CRM&#x27;s developer API for building custom integrations with Copper data.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developer.copper.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="CRM and Sales" data-access="unclear"
+            data-auth="OAUTH2, API_KEY" data-buildable="buildable_with_workaround"
+            data-name="dealcloud">
+          <td class="px-3 py-2 font-medium text-slate-100">DealCloud</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">CRM and Sales</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">DealCloud&#x27;s API and MCP server for querying and managing deal/relationship CRM data.</td>
+          <td class="px-3 py-2 text-xs">OAUTH2, API_KEY</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://api.docs.dealcloud.com/mcp/authentication" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Support and Helpdesk" data-access="unclear"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="zendesk">
+          <td class="px-3 py-2 font-medium text-slate-100">Zendesk</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Support and Helpdesk</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Zendesk&#x27;s API reference covering ticketing, help center, chat, voice, and CRM products.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ zendesk</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developer.zendesk.com/api-reference/" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Support and Helpdesk" data-access="self_serve"
+            data-auth="BEARER_TOKEN, OAUTH2" data-buildable="buildable_now"
+            data-name="intercom">
+          <td class="px-3 py-2 font-medium text-slate-100">Intercom</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Support and Helpdesk</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Intercom&#x27;s developer platform for building apps and integrations via API, OAuth, and MCP.</td>
+          <td class="px-3 py-2 text-xs">BEARER_TOKEN, OAUTH2</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ intercom</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.intercom.com/docs/build-an-integration/getting-started/" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Support and Helpdesk" data-access="unclear"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="freshdesk">
+          <td class="px-3 py-2 font-medium text-slate-100">Freshdesk</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Support and Helpdesk</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Freshdesk&#x27;s developer platform offering SDK and API docs for helpdesk integrations.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ freshdesk</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.freshdesk.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Support and Helpdesk" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="front">
+          <td class="px-3 py-2 font-medium text-slate-100">Front</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Support and Helpdesk</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Front&#x27;s customer service platform connecting conversations with CRM, TMS, and other systems.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://front.com/api" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Support and Helpdesk" data-access="unclear"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="pylon">
+          <td class="px-3 py-2 font-medium text-slate-100">Pylon</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Support and Helpdesk</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Pylon is an agentic B2B customer support platform with agents, connectors, and an API.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ pylon_mcp</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://docs.usepylon.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Support and Helpdesk" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="liveagent">
+          <td class="px-3 py-2 font-medium text-slate-100">LiveAgent</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Support and Helpdesk</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">LiveAgent is an all-in-one help desk platform with live chat, ticketing, and call center.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://liveagent.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Support and Helpdesk" data-access="unclear"
+            data-auth="API_KEY, BEARER_TOKEN" data-buildable="buildable_now"
+            data-name="plain">
+          <td class="px-3 py-2 font-medium text-slate-100">Plain</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Support and Helpdesk</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">GraphQL API for Plain&#x27;s customer support platform, letting developers query and mutate support data.</td>
+          <td class="px-3 py-2 text-xs">API_KEY, BEARER_TOKEN</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ plain</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://docs.plain.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Support and Helpdesk" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="help scout">
+          <td class="px-3 py-2 font-medium text-slate-100">Help Scout</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Support and Helpdesk</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">—</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ help_scout</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developer.helpscout.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Support and Helpdesk" data-access="unclear"
+            data-auth="—" data-buildable="unclear"
+            data-name="gorgias">
+          <td class="px-3 py-2 font-medium text-slate-100">Gorgias</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Support and Helpdesk</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">—</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ gorgias</td>
+          <td class="px-3 py-2 text-xs">
+            <span class="text-slate-600">unverified</span>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Support and Helpdesk" data-access="unclear"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="gladly">
+          <td class="px-3 py-2 font-medium text-slate-100">Gladly</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Support and Helpdesk</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">REST API and SDKs for integrating with Gladly&#x27;s customer service platform, chat, and help center.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developer.gladly.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Communications and Messaging" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="slack">
+          <td class="px-3 py-2 font-medium text-slate-100">Slack</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Communications and Messaging</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Team messaging and collaboration app; this page is an end-user getting-started guide, not developer API docs.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ slack</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://slack.com/getting-started" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Communications and Messaging" data-access="unclear"
+            data-auth="—" data-buildable="unclear"
+            data-name="twilio">
+          <td class="px-3 py-2 font-medium text-slate-100">Twilio</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Communications and Messaging</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">—</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <span class="text-slate-600">unverified</span>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Communications and Messaging" data-access="self_serve"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="zoho cliq">
+          <td class="px-3 py-2 font-medium text-slate-100">Zoho Cliq</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Communications and Messaging</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Zoho&#x27;s developer platform hub for building apps, integrations, extensions, and AI agents across Zoho products.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ zoho</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.zoho.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Communications and Messaging" data-access="unclear"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="lark (larksuite)">
+          <td class="px-3 py-2 font-medium text-slate-100">Lark (Larksuite)</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Communications and Messaging</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Lark&#x27;s developer platform documentation for building custom apps, bots, and integrations via Server APIs.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://open.larksuite.com/document" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Communications and Messaging" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="pumble">
+          <td class="px-3 py-2 font-medium text-slate-100">Pumble</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Communications and Messaging</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Free team chat tool for messaging, video calls, and file sharing, with an MCP server for AI agents.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://pumble.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Communications and Messaging" data-access="self_serve"
+            data-auth="OAUTH2" data-buildable="buildable_now"
+            data-name="discord">
+          <td class="px-3 py-2 font-medium text-slate-100">Discord</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Communications and Messaging</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Platform for building bots, Activities, and social integrations that connect to Discord servers and users.</td>
+          <td class="px-3 py-2 text-xs">OAUTH2</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ discord</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://docs.discord.com/developers/quick-start/overview-of-apps" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Communications and Messaging" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="telegram">
+          <td class="px-3 py-2 font-medium text-slate-100">Telegram</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Communications and Messaging</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Cloud-based mobile and desktop messaging app with a focus on security and speed.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ telegram</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://core.telegram.org/developers" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Communications and Messaging" data-access="unclear"
+            data-auth="BEARER_TOKEN" data-buildable="buildable_with_workaround"
+            data-name="whatsapp business">
+          <td class="px-3 py-2 font-medium text-slate-100">WhatsApp Business</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Communications and Messaging</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Enterprise APIs for sending WhatsApp business messages, managing templates, and making WhatsApp calls.</td>
+          <td class="px-3 py-2 text-xs">BEARER_TOKEN</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ whatsapp</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.facebook.com/docs/whatsapp" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Communications and Messaging" data-access="gated_partnership"
+            data-auth="OAUTH2" data-buildable="buildable_with_workaround"
+            data-name="aircall">
+          <td class="px-3 py-2 font-medium text-slate-100">Aircall</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Communications and Messaging</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Cloud call center/phone system with a Public API and OAuth integration for accessing customer call data.</td>
+          <td class="px-3 py-2 text-xs">OAUTH2</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">gated_partnership</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.aircall.io/tutorials/how-aircall-oauth-flow-works" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Communications and Messaging" data-access="unclear"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="vonage">
+          <td class="px-3 py-2 font-medium text-slate-100">Vonage</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Communications and Messaging</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Communications APIs for voice, video, messaging, network features, and low-code AI conversational flows.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developer.vonage.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Marketing, Ads, Email and Social" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="google ads">
+          <td class="px-3 py-2 font-medium text-slate-100">Google Ads</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Marketing, Ads, Email and Social</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Platform to create and manage ads on Google Search, Display, YouTube, and Shopping.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ googleads</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.google.com/google-ads" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Marketing, Ads, Email and Social" data-access="self_serve"
+            data-auth="OAUTH2" data-buildable="buildable_now"
+            data-name="meta ads">
+          <td class="px-3 py-2 font-medium text-slate-100">Meta Ads</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Marketing, Ads, Email and Social</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Marketing API for programmatically managing Meta ad accounts, campaigns, and access tokens.</td>
+          <td class="px-3 py-2 text-xs">OAUTH2</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ metaads</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authentication" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Marketing, Ads, Email and Social" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="linkedin ads">
+          <td class="px-3 py-2 font-medium text-slate-100">LinkedIn Ads</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Marketing, Ads, Email and Social</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Unknown — fetched page is Microsoft&#x27;s generic developer homepage, unrelated to LinkedIn Ads.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ linkedin_ads</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://learn.microsoft.com/developer" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Marketing, Ads, Email and Social" data-access="self_serve"
+            data-auth="OAUTH2, API_KEY, BEARER_TOKEN" data-buildable="buildable_now"
+            data-name="gohighlevel">
+          <td class="px-3 py-2 font-medium text-slate-100">GoHighLevel</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Marketing, Ads, Email and Social</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">REST API for HighLevel&#x27;s CRM/marketing platform covering contacts, messaging, calendar, sales, and payments.</td>
+          <td class="px-3 py-2 text-xs">OAUTH2, API_KEY, BEARER_TOKEN</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ highlevel</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://marketplace.gohighlevel.com/docs/" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Marketing, Ads, Email and Social" data-access="self_serve"
+            data-auth="API_KEY, OAUTH2" data-buildable="buildable_now"
+            data-name="mailchimp">
+          <td class="px-3 py-2 font-medium text-slate-100">Mailchimp</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Marketing, Ads, Email and Social</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Marketing API to manage audiences, automation workflows, and email activity data.</td>
+          <td class="px-3 py-2 text-xs">API_KEY, OAUTH2</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ mailchimp</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://mailchimp.com/developer/marketing/guides/quick-start/" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Marketing, Ads, Email and Social" data-access="self_serve"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="klaviyo">
+          <td class="px-3 py-2 font-medium text-slate-100">Klaviyo</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Marketing, Ads, Email and Social</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">API for building apps/integrations using Klaviyo customer profile, event, and marketing data.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ klaviyo</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.klaviyo.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Marketing, Ads, Email and Social" data-access="self_serve"
+            data-auth="API_KEY" data-buildable="buildable_now"
+            data-name="systeme.io">
+          <td class="px-3 py-2 font-medium text-slate-100">systeme.io</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Marketing, Ads, Email and Social</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Public REST API for managing systeme.io contacts, tags, and platform operations.</td>
+          <td class="px-3 py-2 text-xs">API_KEY</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developer.systeme.io" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Marketing, Ads, Email and Social" data-access="gated_approval"
+            data-auth="OAUTH2, API_KEY" data-buildable="buildable_with_workaround"
+            data-name="pinterest">
+          <td class="px-3 py-2 font-medium text-slate-100">Pinterest</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Marketing, Ads, Email and Social</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">OAuth-based developer API for building apps on Pinterest, including ads/campaign management.</td>
+          <td class="px-3 py-2 text-xs">OAUTH2, API_KEY</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">gated_approval</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ pinterest_ads</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.pinterest.com/docs/getting-started" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Marketing, Ads, Email and Social" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="threads (meta)">
+          <td class="px-3 py-2 font-medium text-slate-100">Threads (Meta)</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Marketing, Ads, Email and Social</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">API for developers to build integrations for posting and managing content on Threads.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.facebook.com/docs/threads" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Marketing, Ads, Email and Social" data-access="unclear"
+            data-auth="API_KEY" data-buildable="buildable_now"
+            data-name="sendgrid">
+          <td class="px-3 py-2 font-medium text-slate-100">SendGrid</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Marketing, Ads, Email and Social</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Twilio SendGrid&#x27;s transactional and marketing email sending API.</td>
+          <td class="px-3 py-2 text-xs">API_KEY</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ sendgrid</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://docs.sendgrid.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Ecommerce" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="shopify">
+          <td class="px-3 py-2 font-medium text-slate-100">Shopify</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Ecommerce</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Platform for building apps, storefronts, and agentic shopping experiences on Shopify.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ shopify</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://shopify.dev/docs" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Ecommerce" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="woocommerce">
+          <td class="px-3 py-2 font-medium text-slate-100">WooCommerce</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Ecommerce</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">WooCommerce is a WordPress ecommerce plugin with a developer blog covering releases and roadmap.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developer.woocommerce.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Ecommerce" data-access="self_serve"
+            data-auth="API_KEY, BEARER_TOKEN" data-buildable="buildable_now"
+            data-name="bigcommerce">
+          <td class="px-3 py-2 font-medium text-slate-100">BigCommerce</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Ecommerce</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">BigCommerce&#x27;s REST and GraphQL APIs for managing storefronts, apps, products, orders, and customers.</td>
+          <td class="px-3 py-2 text-xs">API_KEY, BEARER_TOKEN</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developer.bigcommerce.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Ecommerce" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="salesforce commerce cloud">
+          <td class="px-3 py-2 font-medium text-slate-100">Salesforce Commerce Cloud</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Ecommerce</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Salesforce Commerce Cloud developer documentation landing page (content not rendered).</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ salesforce</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developer.salesforce.com/docs/commerce" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Ecommerce" data-access="unclear"
+            data-auth="OAUTH2, API_KEY" data-buildable="buildable_with_workaround"
+            data-name="magento (adobe commerce)">
+          <td class="px-3 py-2 font-medium text-slate-100">Magento (Adobe Commerce)</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Ecommerce</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Adobe&#x27;s general authentication guide describing OAuth, server-to-server, API key, and admin credential types.</td>
+          <td class="px-3 py-2 text-xs">OAUTH2, API_KEY</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developer.adobe.com/authentication" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Ecommerce" data-access="self_serve"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="squarespace">
+          <td class="px-3 py-2 font-medium text-slate-100">Squarespace</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Ecommerce</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Squarespace Developer Platform for customizing site templates via Developer Mode and Git.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.squarespace.com/quick-start" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Ecommerce" data-access="unclear"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="ecwid">
+          <td class="px-3 py-2 font-medium text-slate-100">Ecwid</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Ecommerce</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Ecwid&#x27;s platform for building private/public apps and storefront integrations via its API and JS API.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://api-docs.ecwid.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Ecommerce" data-access="self_serve"
+            data-auth="OAUTH2" data-buildable="buildable_now"
+            data-name="gumroad">
+          <td class="px-3 py-2 font-medium text-slate-100">Gumroad</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Ecommerce</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Gumroad&#x27;s REST OAuth2 API for managing products, sales, subscribers, licenses, and payouts.</td>
+          <td class="px-3 py-2 text-xs">OAUTH2</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ gumroad</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://gumroad.com/api" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Ecommerce" data-access="gated_approval"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="amazon selling partner">
+          <td class="px-3 py-2 font-medium text-slate-100">Amazon Selling Partner</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Ecommerce</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Amazon&#x27;s API suite for sellers/vendors to manage orders, listings, inventory, pricing, and fulfillment.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">gated_approval</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developer-docs.amazon.com/sp-api" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Ecommerce" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="fanbasis">
+          <td class="px-3 py-2 font-medium text-slate-100">fanbasis</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Ecommerce</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">All-in-one platform for checkouts, funnels, courses, webinars, communities, affiliates, and embedded payments.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.fanbasis.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Data, SEO and Scraping" data-access="self_serve"
+            data-auth="—" data-buildable="buildable_now"
+            data-name="dataforseo">
+          <td class="px-3 py-2 font-medium text-slate-100">DataForSEO</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Data, SEO and Scraping</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">REST API platform for SEO data including SERP, keyword, backlink, and on-page datasets.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ dataforseo</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://docs.dataforseo.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Data, SEO and Scraping" data-access="self_serve"
+            data-auth="—" data-buildable="buildable_now"
+            data-name="se ranking">
+          <td class="px-3 py-2 font-medium text-slate-100">SE Ranking</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Data, SEO and Scraping</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">SEO/AEO data API for keyword rankings, backlinks, traffic, and site audits, plus MCP access.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://seranking.com/api.html" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Data, SEO and Scraping" data-access="gated_paid"
+            data-auth="API_KEY, OAUTH2" data-buildable="buildable_with_workaround"
+            data-name="ahrefs">
+          <td class="px-3 py-2 font-medium text-slate-100">Ahrefs</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Data, SEO and Scraping</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">SEO/backlink/keyword research and brand-visibility data API with REST, MCP, and Data Studio connectors.</td>
+          <td class="px-3 py-2 text-xs">API_KEY, OAUTH2</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">gated_paid</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ ahrefs</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://ahrefs.com/api" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Data, SEO and Scraping" data-access="self_serve"
+            data-auth="API_KEY" data-buildable="buildable_now"
+            data-name="mrscraper">
+          <td class="px-3 py-2 font-medium text-slate-100">MrScraper</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Data, SEO and Scraping</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">AI-powered and manual web scraping platform with API, CLI, and MCP server access.</td>
+          <td class="px-3 py-2 text-xs">API_KEY</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ mrscraper</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://docs.mrscraper.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Data, SEO and Scraping" data-access="unclear"
+            data-auth="—" data-buildable="buildable_now"
+            data-name="apify">
+          <td class="px-3 py-2 font-medium text-slate-100">Apify</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Data, SEO and Scraping</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Cloud platform (&#x27;Actors&#x27;) for web scraping and automation, with API, SDKs, CLI, and MCP server.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ apify</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://docs.apify.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Data, SEO and Scraping" data-access="self_serve"
+            data-auth="API_KEY, BEARER_TOKEN" data-buildable="buildable_now"
+            data-name="firecrawl">
+          <td class="px-3 py-2 font-medium text-slate-100">Firecrawl</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Data, SEO and Scraping</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Web scraping/crawling/search API returning markdown, HTML, or structured JSON for AI applications.</td>
+          <td class="px-3 py-2 text-xs">API_KEY, BEARER_TOKEN</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ firecrawl</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://docs.firecrawl.dev" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Data, SEO and Scraping" data-access="self_serve"
+            data-auth="API_KEY, BEARER_TOKEN, BASIC" data-buildable="buildable_now"
+            data-name="bright data">
+          <td class="px-3 py-2 font-medium text-slate-100">Bright Data</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Data, SEO and Scraping</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Web scraping, proxy, and unlocker platform accessed via API key or proxy credentials.</td>
+          <td class="px-3 py-2 text-xs">API_KEY, BEARER_TOKEN, BASIC</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ brightdata</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://docs.brightdata.com/api-reference/authentication" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Data, SEO and Scraping" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="sherlock">
+          <td class="px-3 py-2 font-medium text-slate-100">Sherlock</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Data, SEO and Scraping</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Unclear from page text; fetched content is a generic GitHub Docs navigation shell, not Sherlock-specific documentation.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developer.github.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Data, SEO and Scraping" data-access="unclear"
+            data-auth="API_KEY" data-buildable="buildable_now"
+            data-name="waterfall.io">
+          <td class="px-3 py-2 font-medium text-slate-100">Waterfall.io</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Data, SEO and Scraping</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Contact and company search/enrichment API returning emails, phones, and employment history.</td>
+          <td class="px-3 py-2 text-xs">API_KEY</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://docs.waterfall.io" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Data, SEO and Scraping" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="clay">
+          <td class="px-3 py-2 font-medium text-slate-100">Clay</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Data, SEO and Scraping</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Developer platform for querying Clay&#x27;s GTM data, running enrichment routines, and reading table data programmatically.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.clay.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Developer, Infra and Data platforms" data-access="self_serve"
+            data-auth="API_KEY, BEARER_TOKEN, OAUTH2" data-buildable="buildable_now"
+            data-name="github">
+          <td class="px-3 py-2 font-medium text-slate-100">GitHub</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Developer, Infra and Data platforms</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Source code hosting and collaboration platform with a REST API for repos, issues, and more.</td>
+          <td class="px-3 py-2 text-xs">API_KEY, BEARER_TOKEN, OAUTH2</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ github</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Developer, Infra and Data platforms" data-access="unclear"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="vercel">
+          <td class="px-3 py-2 font-medium text-slate-100">Vercel</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Developer, Infra and Data platforms</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">REST API for managing Vercel deployments, projects, access groups, and platform resources.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ vercel</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://vercel.com/docs/rest-api" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Developer, Infra and Data platforms" data-access="self_serve"
+            data-auth="API_KEY, BEARER_TOKEN, OAUTH2" data-buildable="buildable_now"
+            data-name="netlify">
+          <td class="px-3 py-2 font-medium text-slate-100">Netlify</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Developer, Infra and Data platforms</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">REST API for managing Netlify site deploys, forms, DNS, and JavaScript injection.</td>
+          <td class="px-3 py-2 text-xs">API_KEY, BEARER_TOKEN, OAUTH2</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://docs.netlify.com/api" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Developer, Infra and Data platforms" data-access="self_serve"
+            data-auth="API_KEY, BEARER_TOKEN" data-buildable="buildable_now"
+            data-name="cloudflare">
+          <td class="px-3 py-2 font-medium text-slate-100">Cloudflare</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Developer, Infra and Data platforms</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Cloudflare API endpoint reference, shown here for retrieving TLS client-auth hostname status.</td>
+          <td class="px-3 py-2 text-xs">API_KEY, BEARER_TOKEN</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ cloudflare</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.cloudflare.com/api/resources/origin_tls_client_auth/subresources/hostnames/methods/get" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Developer, Infra and Data platforms" data-access="unclear"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="supabase">
+          <td class="px-3 py-2 font-medium text-slate-100">Supabase</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Developer, Infra and Data platforms</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Open-source backend platform providing Postgres database, auth, storage, realtime, and edge functions.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ supabase</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://supabase.com/docs" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Developer, Infra and Data platforms" data-access="self_serve"
+            data-auth="BASIC" data-buildable="buildable_now"
+            data-name="neo4j">
+          <td class="px-3 py-2 font-medium text-slate-100">Neo4j</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Developer, Infra and Data platforms</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Graph database platform queried via language drivers (Python, Java, JavaScript, C#) using Cypher.</td>
+          <td class="px-3 py-2 text-xs">BASIC</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ neo4j</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://neo4j.com/developer" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Developer, Infra and Data platforms" data-access="self_serve"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="snowflake">
+          <td class="px-3 py-2 font-medium text-slate-100">Snowflake</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Developer, Infra and Data platforms</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Cloud data warehouse platform with SQL, Snowpark API, and developer tooling for data workloads.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ snowflake</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://docs.snowflake.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Developer, Infra and Data platforms" data-access="unclear"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="mongodb atlas">
+          <td class="px-3 py-2 font-medium text-slate-100">MongoDB Atlas</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Developer, Infra and Data platforms</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Cloud database service offering an Administration API to manage clusters, projects, and users programmatically.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://mongodb.com/docs/atlas/api" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Developer, Infra and Data platforms" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="datadog">
+          <td class="px-3 py-2 font-medium text-slate-100">Datadog</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Developer, Infra and Data platforms</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Developer, Infra and Data platform tool; page content could not be extracted (corrupted/binary data).</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ datadog</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://docs.datadoghq.com/api" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Developer, Infra and Data platforms" data-access="unclear"
+            data-auth="—" data-buildable="unclear"
+            data-name="sentry">
+          <td class="px-3 py-2 font-medium text-slate-100">Sentry</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Developer, Infra and Data platforms</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">—</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ sentry</td>
+          <td class="px-3 py-2 text-xs">
+            <span class="text-slate-600">unverified</span>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Productivity and Project Management" data-access="self_serve"
+            data-auth="API_KEY, OAUTH2, BEARER_TOKEN" data-buildable="buildable_now"
+            data-name="notion">
+          <td class="px-3 py-2 font-medium text-slate-100">Notion</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Productivity and Project Management</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Workspace platform with a REST API to read, create, and update pages, databases, users, and comments.</td>
+          <td class="px-3 py-2 text-xs">API_KEY, OAUTH2, BEARER_TOKEN</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ notion</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.notion.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Productivity and Project Management" data-access="unclear"
+            data-auth="OAUTH2" data-buildable="buildable_now"
+            data-name="airtable">
+          <td class="px-3 py-2 font-medium text-slate-100">Airtable</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Productivity and Project Management</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Structured data platform accessible to AI agents via an official MCP server, CLI, and skills.</td>
+          <td class="px-3 py-2 text-xs">OAUTH2</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ airtable</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://airtable.com/developers" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Productivity and Project Management" data-access="unclear"
+            data-auth="OAUTH2, API_KEY" data-buildable="buildable_now"
+            data-name="linear">
+          <td class="px-3 py-2 font-medium text-slate-100">Linear</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Productivity and Project Management</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Issue tracking and project management tool with a GraphQL API for developers.</td>
+          <td class="px-3 py-2 text-xs">OAUTH2, API_KEY</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ linear</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.linear.app" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Productivity and Project Management" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="jira">
+          <td class="px-3 py-2 font-medium text-slate-100">Jira</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Productivity and Project Management</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Atlassian&#x27;s issue and project tracking product; page gave only a navigation shell.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ jira</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developer.atlassian.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Productivity and Project Management" data-access="self_serve"
+            data-auth="API_KEY" data-buildable="buildable_now"
+            data-name="asana">
+          <td class="px-3 py-2 font-medium text-slate-100">Asana</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Productivity and Project Management</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Work management platform with an API for automating tasks, workflows, and integrations.</td>
+          <td class="px-3 py-2 text-xs">API_KEY</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ asana</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.asana.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Productivity and Project Management" data-access="self_serve"
+            data-auth="OAUTH2" data-buildable="buildable_now"
+            data-name="monday.com">
+          <td class="px-3 py-2 font-medium text-slate-100">Monday.com</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Productivity and Project Management</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Work OS platform with a GraphQL API, agents framework, and app hosting infrastructure.</td>
+          <td class="px-3 py-2 text-xs">OAUTH2</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ monday</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developer.monday.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Productivity and Project Management" data-access="self_serve"
+            data-auth="OAUTH2" data-buildable="buildable_now"
+            data-name="clickup">
+          <td class="px-3 py-2 font-medium text-slate-100">ClickUp</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Productivity and Project Management</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Productivity/project management platform with a public API, MCP server, and webhooks.</td>
+          <td class="px-3 py-2 text-xs">OAUTH2</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ clickup</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://clickup.com/api" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Productivity and Project Management" data-access="unclear"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="coda">
+          <td class="px-3 py-2 font-medium text-slate-100">Coda</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Productivity and Project Management</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Superhuman Docs (formerly Coda) REST API for managing docs, tables, rows, and automations.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ coda</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://coda.io/developers" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Productivity and Project Management" data-access="self_serve"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="smartsheet">
+          <td class="px-3 py-2 font-medium text-slate-100">Smartsheet</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Productivity and Project Management</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Work management platform with an API, SDKs, and MCP server for programmatic access to sheets.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://smartsheet.com/developers" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Productivity and Project Management" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="harvest">
+          <td class="px-3 py-2 font-medium text-slate-100">Harvest</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Productivity and Project Management</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Time tracking and invoicing tool; fetched page was an end-user sign-in gate, not developer docs.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ harvest</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.harvestapp.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Finance and Fintech" data-access="self_serve"
+            data-auth="API_KEY" data-buildable="buildable_now"
+            data-name="stripe">
+          <td class="px-3 py-2 font-medium text-slate-100">Stripe</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Finance and Fintech</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Payment processing REST API for online payments, billing, and financial infrastructure.</td>
+          <td class="px-3 py-2 text-xs">API_KEY</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ stripe</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://stripe.com/docs/api" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Finance and Fintech" data-access="unclear"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="plaid">
+          <td class="px-3 py-2 font-medium text-slate-100">Plaid</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Finance and Fintech</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Financial data API for connecting bank accounts, transactions, payments, and identity verification.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://plaid.com/docs" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Finance and Fintech" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="binance">
+          <td class="px-3 py-2 font-medium text-slate-100">Binance</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Finance and Fintech</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">—</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <span class="text-slate-600">unverified</span>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Finance and Fintech" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="paygent connect">
+          <td class="px-3 py-2 font-medium text-slate-100">Paygent Connect</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Finance and Fintech</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">—</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <span class="text-slate-600">unverified</span>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Finance and Fintech" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="ipayx">
+          <td class="px-3 py-2 font-medium text-slate-100">iPayX</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Finance and Fintech</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">FX transaction audit tool comparing bank exchange rates to mid-market rates to reveal hidden spreads.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://ipayx.ai/docs" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Finance and Fintech" data-access="self_serve"
+            data-auth="—" data-buildable="buildable_now"
+            data-name="quickbooks">
+          <td class="px-3 py-2 font-medium text-slate-100">QuickBooks</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Finance and Fintech</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Accounting API (REST and GraphQL) for integrating apps with QuickBooks Online.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ quickbooks</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developer.intuit.com/app/developer/qbo/docs/get-started" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Finance and Fintech" data-access="self_serve"
+            data-auth="OAUTH2" data-buildable="buildable_now"
+            data-name="xero">
+          <td class="px-3 py-2 font-medium text-slate-100">Xero</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Finance and Fintech</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Developer platform and APIs for building integrations with Xero&#x27;s accounting software.</td>
+          <td class="px-3 py-2 text-xs">OAUTH2</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ xero</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developer.xero.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Finance and Fintech" data-access="unclear"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="brex">
+          <td class="px-3 py-2 font-medium text-slate-100">Brex</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Finance and Fintech</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">REST API for corporate spend platform covering cards, expenses, payments, accounting, and travel.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ brex</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developer.brex.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Finance and Fintech" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="ramp">
+          <td class="px-3 py-2 font-medium text-slate-100">Ramp</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Finance and Fintech</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Not described on this page; the fetched content is only crawler-fetch instructions, not product/API documentation.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ ramp</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://docs.ramp.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="Finance and Fintech" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="pitchbook">
+          <td class="px-3 py-2 font-medium text-slate-100">PitchBook</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">Finance and Fintech</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Private market data, research, and tools covering companies, deals, investors, and funds.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://pitchbook.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="AI, Research and Media-native" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="notebooklm">
+          <td class="px-3 py-2 font-medium text-slate-100">NotebookLM</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">AI, Research and Media-native</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Not described on this page; the fetched content is unrelated Google Cloud onboarding documentation, not NotebookLM material.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ notebook_lm</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://docs.cloud.google.com/docs/get-started/" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="AI, Research and Media-native" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="otter ai">
+          <td class="px-3 py-2 font-medium text-slate-100">Otter AI</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">AI, Research and Media-native</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Not fully described; help center covers meeting transcription/notetaking, settings, and third-party app integrations.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://help.otter.ai" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="AI, Research and Media-native" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="fathom">
+          <td class="px-3 py-2 font-medium text-slate-100">Fathom</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">AI, Research and Media-native</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">AI meeting notetaker that records, transcribes, and summarizes calls with searchable action items.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ fathom</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://fathom.video" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="AI, Research and Media-native" data-access="unclear"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="consensus">
+          <td class="px-3 py-2 font-medium text-slate-100">Consensus</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">AI, Research and Media-native</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">API for querying and filtering academic research papers by field, study type, sample size, and other criteria.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://docs.consensus.app" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="AI, Research and Media-native" data-access="unclear"
+            data-auth="—" data-buildable="buildable_with_workaround"
+            data-name="reducto">
+          <td class="px-3 py-2 font-medium text-slate-100">Reducto</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">AI, Research and Media-native</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Agentic document processing platform for classifying, extracting, editing, and parsing documents at scale.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-amber-900/40 text-amber-300 border-amber-700/50">buildable_with_workaround</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://docs.reducto.ai" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="AI, Research and Media-native" data-access="unclear"
+            data-auth="—" data-buildable="unclear"
+            data-name="devin">
+          <td class="px-3 py-2 font-medium text-slate-100">Devin</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">AI, Research and Media-native</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">—</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ devin_mcp</td>
+          <td class="px-3 py-2 text-xs">
+            <span class="text-slate-600">unverified</span>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="AI, Research and Media-native" data-access="self_serve"
+            data-auth="API_KEY" data-buildable="buildable_now"
+            data-name="higgsfield">
+          <td class="px-3 py-2 font-medium text-slate-100">higgsfield</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">AI, Research and Media-native</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Generates AI media (images, video) via async model-endpoint requests with polling or webhooks.</td>
+          <td class="px-3 py-2 text-xs">API_KEY</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://docs.higgsfield.ai" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="AI, Research and Media-native" data-access="unclear"
+            data-auth="—" data-buildable="blocked"
+            data-name="mermaid cli">
+          <td class="px-3 py-2 font-medium text-slate-100">Mermaid CLI</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">AI, Research and Media-native</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">Not described on this page, which is a generic GitHub docs navigation menu unrelated to this app.</td>
+          <td class="px-3 py-2 text-xs">—</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-slate-800 text-slate-400 border-slate-700">unclear</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-rose-900/40 text-rose-300 border-rose-700/50">blocked</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developer.github.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="AI, Research and Media-native" data-access="self_serve"
+            data-auth="API_KEY, BEARER_TOKEN" data-buildable="buildable_now"
+            data-name="youtube transcript">
+          <td class="px-3 py-2 font-medium text-slate-100">YouTube Transcript</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">AI, Research and Media-native</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">REST and MCP API for YouTube transcripts, video/channel search, and playlist extraction.</td>
+          <td class="px-3 py-2 text-xs">API_KEY, BEARER_TOKEN</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">✅ youtube</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://transcriptapi.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-800 hover:bg-slate-900/60 app-row"
+            data-category="AI, Research and Media-native" data-access="self_serve"
+            data-auth="OAUTH2, API_KEY, BEARER_TOKEN" data-buildable="buildable_now"
+            data-name="grain">
+          <td class="px-3 py-2 font-medium text-slate-100">Grain</td>
+          <td class="px-3 py-2 text-slate-400 text-xs">AI, Research and Media-native</td>
+          <td class="px-3 py-2 text-slate-300 text-xs max-w-xs">API for Grain meeting data with Personal Access Token, Workspace Access Token, or OAuth2 access.</td>
+          <td class="px-3 py-2 text-xs">OAUTH2, API_KEY, BEARER_TOKEN</td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">self_serve</span></td>
+          <td class="px-3 py-2"><span class="inline-block px-2 py-0.5 rounded text-xs border bg-emerald-900/40 text-emerald-300 border-emerald-700/50">buildable_now</span></td>
+          <td class="px-3 py-2 text-xs text-slate-400">—</td>
+          <td class="px-3 py-2 text-xs">
+            <a href="https://developers.grain.com" target="_blank" class="text-sky-400 hover:underline">source</a>
+          </td>
+        </tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- THE AGENT -->
+  <section class="mb-12">
+    <h2 class="text-lg font-semibold text-white mb-4 flex items-center gap-2"><span class="text-sky-400">03</span> The agent</h2>
+    <div class="grid md:grid-cols-2 gap-6 text-sm text-slate-300">
+      <div class="rounded-lg border border-slate-800 p-4">
+        <h3 class="font-semibold text-slate-100 mb-2">What it does (fully automated)</h3>
+        <ol class="list-decimal list-inside space-y-1.5 text-slate-400">
+          <li><b class="text-slate-200">Registry lookup</b> — checks Composio's public toolkit docs (no API key) for all 100 apps; found 61 already have a toolkit, with Composio's own auth/tool-count metadata.</li>
+          <li><b class="text-slate-200">Docs fetch + cache</b> — resolves each app's real developer-docs URL (tries the brief's hint, then conventional docs subpaths), fetches and caches the page text, records the exact source URL used.</li>
+          <li><b class="text-slate-200">Structured extraction</b> — batches ~8 apps per call into an LLM (via the Claude Code CLI, subscription-authenticated, no paid API key needed) with a strict JSON schema and a hard "answer only from the page, null beats a guess" rule.</li>
+          <li><b class="text-slate-200">Validation</b> — every record is checked: enum fields match, evidence quotes must appear verbatim in the source page (catches fabrication), ids match. Invalid records are rejected, not silently kept.</li>
+          <li><b class="text-slate-200">Cross-check</b> — the 61 registry apps get their LLM-extracted auth compared against Composio's own auth field — a second, independent source, for free.</li>
+          <li><b class="text-slate-200">Synthesis</b> — clusters the 100 records into the patterns shown above via plain Python aggregation, not another LLM call.</li>
+        </ol>
+      </div>
+      <div class="rounded-lg border border-slate-800 p-4">
+        <h3 class="font-semibold text-slate-100 mb-2">Where a human was needed</h3>
+        <ul class="list-disc list-inside space-y-1.5 text-slate-400">
+          <li>Matching 5 app names to non-obvious Composio slugs (e.g. GoHighLevel → <code class="text-xs bg-slate-800 px-1 rounded">highlevel</code>) and <b class="text-rose-300">rejecting 2 false-positive near-matches</b> (Squarespace ≠ Square; Mermaid CLI ≠ Mermaid Chart MCP) that automated fuzzy-matching surfaced but were the wrong product.</li>
+          <li>Discovering that the brief's own hint URL for GoHighLevel (a Stoplight workspace) is dead, and finding the real current docs location by hand.</li>
+          <li>Capturing 4 apps' docs via the browser tool by hand — their real developer docs are JS-rendered SPAs that plain HTTP fetch returns empty for (Lark, Gumroad, QuickBooks, GoHighLevel).</li>
+          <li>Designing and pre-registering the stratified verification sample (see below) <i>before</i> reading pass-1 results, so it couldn't be biased toward apps the agent got right.</li>
+          <li>Every hand-check in Tier 2 below, and turning each confirmed miss into an explicit rule fed back into the pass-2 prompt.</li>
+          <li>3 apps the pipeline could not get real evidence for at all: Binance (bot/geo-gated JS docs), Paygent Connect (the brief's own hint isn't a resolvable domain), PitchBook (403, consistent with it being an enterprise contact-sales product) — reported here rather than papered over.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- VERIFICATION -->
+  <section class="mb-12">
+    <h2 class="text-lg font-semibold text-white mb-4 flex items-center gap-2"><span class="text-sky-400">04</span> Verification — is any of this trustworthy?</h2>
+    <p class="text-sm text-slate-400 mb-4 max-w-3xl">Two independent tiers. Tier 1 is machine cross-checking against Composio's own registry (free, covers 61 apps). Tier 2 is a human, using the browser tool, hand-checking a 22-app sample against real vendor docs — the sample was picked and written down <i>before</i> pass 1 was read, so it can't be cherry-picked to look good.</p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+        <div class="rounded-lg border border-slate-800 p-4">
+          <div class="text-xs text-slate-500 uppercase tracking-wide">Tier 1 · Pass 1 vs Composio registry</div>
+          <div class="text-3xl font-bold text-amber-400">10%</div>
+          <div class="text-xs text-slate-500">6/58 agree with Composio's own auth field</div>
+        </div>
+        <div class="rounded-lg border border-slate-800 p-4">
+          <div class="text-xs text-slate-500 uppercase tracking-wide">Tier 1 · Pass 2 vs Composio registry</div>
+          <div class="text-3xl font-bold text-amber-400">12%</div>
+          <div class="text-xs text-slate-500">7/58 agree with Composio's own auth field</div>
+        </div>
+        <div class="rounded-lg border border-slate-800 p-4">
+          <div class="text-xs text-slate-500 uppercase tracking-wide">Tier 2 · Pass 1 hand-verified sample</div>
+          <div class="text-3xl font-bold text-amber-400">64%</div>
+          <div class="text-xs text-slate-500">21/33 field-level judgments correct, 22 apps hand-checked</div>
+        </div>
+        <div class="rounded-lg border border-slate-800 p-4">
+          <div class="text-xs text-slate-500 uppercase tracking-wide">Tier 2 · Pass 2 hand-verified sample</div>
+          <div class="text-3xl font-bold text-amber-400">73%</div>
+          <div class="text-xs text-slate-500">24/33 field-level judgments correct, 22 apps hand-checked</div>
+        </div></div>
+
+    <h3 class="text-sm font-semibold text-slate-300 mt-6 mb-1">Pass 1 misses (hand-verified sample)</h3>
+    
+        <table class="w-full text-sm mt-3">
+          <thead><tr class="text-left text-xs text-slate-500 border-b border-slate-700">
+            <th class="px-3 py-1">App</th><th class="px-3 py-1">Field</th>
+            <th class="px-3 py-1">Agent said</th><th class="px-3 py-1">Actually</th>
+            <th class="px-3 py-1">Why wrong</th>
+          </tr></thead>
+          <tbody>
+          <tr class="border-b border-slate-800">
+            <td class="px-3 py-2 font-medium">Salesforce</td>
+            <td class="px-3 py-2 text-xs">auth_methods</td>
+            <td class="px-3 py-2 text-xs text-rose-300">[] (empty)</td>
+            <td class="px-3 py-2 text-xs text-emerald-300">OAUTH2 (also supports API-key-based External Client Apps for server-to-server)</td>
+            <td class="px-3 py-2 text-xs text-slate-400">Pass-1&#x27;s fetched page (developer.salesforce.com root) was a marketing/product-announcement page with no auth content. The real answer is one hop away at the OAuth authentication guide. Same nav-shell-page failure mode fixed for pass 2 (see pass2_rules.md #1).</td>
+          </tr>
+          <tr class="border-b border-slate-800">
+            <td class="px-3 py-2 font-medium">Twilio</td>
+            <td class="px-3 py-2 text-xs">auth_methods</td>
+            <td class="px-3 py-2 text-xs text-rose-300">[] (empty)</td>
+            <td class="px-3 py-2 text-xs text-emerald-300">BASIC (Account SID/Auth Token, or API Key as username + secret as password)</td>
+            <td class="px-3 py-2 text-xs text-slate-400">developers.twilio.com (pass-1&#x27;s fetched URL) is an events/training hub, not API reference -- confirmed by hand during Tier 2, already recorded as a human_corrected_wrong_page override in fetch_docs.py pointing pass 2 at www.twilio.com/docs/usage/api instead.</td>
+          </tr>
+          <tr class="border-b border-slate-800">
+            <td class="px-3 py-2 font-medium">Shopify</td>
+            <td class="px-3 py-2 text-xs">auth_methods</td>
+            <td class="px-3 py-2 text-xs text-rose-300">[] (empty)</td>
+            <td class="px-3 py-2 text-xs text-emerald-300">OAUTH2 (authorization code grant for standalone apps) and API_KEY (access tokens, incl. Storefront API tokens)</td>
+            <td class="px-3 py-2 text-xs text-slate-400">shopify.dev/docs (pass-1 URL) links out to the real authentication page without stating the mechanism itself -- another instance of the nav-shell/index-page problem.</td>
+          </tr>
+          <tr class="border-b border-slate-800">
+            <td class="px-3 py-2 font-medium">Threads (Meta)</td>
+            <td class="px-3 py-2 text-xs">auth_methods</td>
+            <td class="px-3 py-2 text-xs text-rose-300">[] (empty)</td>
+            <td class="px-3 py-2 text-xs text-emerald-300">OAUTH2 (&quot;Threads user access tokens that conform to the OAuth 2.0 protocol&quot;)</td>
+            <td class="px-3 py-2 text-xs text-slate-400">Pass-1 fetched the docs index (developers.facebook.com/docs/threads), which references the mechanism without naming it; the get-started subpage states it directly.</td>
+          </tr>
+          <tr class="border-b border-slate-800">
+            <td class="px-3 py-2 font-medium">Threads (Meta)</td>
+            <td class="px-3 py-2 text-xs">access_model</td>
+            <td class="px-3 py-2 text-xs text-rose-300">self_serve</td>
+            <td class="px-3 py-2 text-xs text-emerald-300">gated_approval</td>
+            <td class="px-3 py-2 text-xs text-slate-400">This is the most consequential miss in the sample: pass 1 called Threads self-serve based on generic app-setup instructions, but the real page states each permission &quot;must first be approved through the App Review process, and your app must be published&quot; -- textbook approval-gated, not self-serve. Directly contradicts the headline self-serve % if left uncorrected.</td>
+          </tr>
+          <tr class="border-b border-slate-800">
+            <td class="px-3 py-2 font-medium">Zendesk</td>
+            <td class="px-3 py-2 text-xs">auth_methods</td>
+            <td class="px-3 py-2 text-xs text-rose-300">[] (empty)</td>
+            <td class="px-3 py-2 text-xs text-emerald-300">OAUTH2 (primary/recommended), API_KEY and BASIC (deprecated, being phased out)</td>
+            <td class="px-3 py-2 text-xs text-slate-400">developers.zendesk.com (pass-1&#x27;s fetched URL) is a dead page -- &quot;the help centre you&#x27;re trying to reach no longer exists.&quot; The model correctly declined to guess from a dead page (good behavior) but the underlying URL was wrong. Already recorded as a human_corrected_dead_page override for pass 2.</td>
+          </tr>
+          <tr class="border-b border-slate-800">
+            <td class="px-3 py-2 font-medium">GitHub</td>
+            <td class="px-3 py-2 text-xs">auth_methods</td>
+            <td class="px-3 py-2 text-xs text-rose-300">[] (empty)</td>
+            <td class="px-3 py-2 text-xs text-emerald-300">OAUTH2 and API_KEY (personal access tokens / installation tokens)</td>
+            <td class="px-3 py-2 text-xs text-slate-400">The single clearest case of the nav-shell bug: docs.github.com/rest fetched fine (HTTP 200) but yielded only a 1744-char sidebar/TOC shell. Root-caused during this verification pass, fixed at the pipeline level for pass 2 (agent/pass2_rules.md #1) and confirmed working (the same URL&#x27;s shell page now correctly follows through to the 9783-char authenticating-to-the-rest-api page).</td>
+          </tr>
+          <tr class="border-b border-slate-800">
+            <td class="px-3 py-2 font-medium">Consensus</td>
+            <td class="px-3 py-2 text-xs">buildable_verdict (adjacent to access_model)</td>
+            <td class="px-3 py-2 text-xs text-rose-300">buildable_now</td>
+            <td class="px-3 py-2 text-xs text-emerald-300">should be blocked or gated_approval</td>
+            <td class="px-3 py-2 text-xs text-slate-400">Self-contradiction inside the pass-1 record: evidence_quote literally reads &quot;Enterprise customers only,&quot; yet access_model was left &quot;unclear&quot; and buildable_verdict was marked &quot;buildable_now&quot; -- the verdict ignores the model&#x27;s own extracted evidence. A real reasoning-consistency failure, not a missing-data one.</td>
+          </tr>
+          <tr class="border-b border-slate-800">
+            <td class="px-3 py-2 font-medium">PitchBook</td>
+            <td class="px-3 py-2 text-xs">access_model</td>
+            <td class="px-3 py-2 text-xs text-rose-300">unclear</td>
+            <td class="px-3 py-2 text-xs text-emerald-300">gated_partnership (more specific and better-supported than &#x27;unclear&#x27;)</td>
+            <td class="px-3 py-2 text-xs text-slate-400">PitchBook&#x27;s own marketing page 403s a scripted fetch and offers only &quot;Request a free trial&quot; -- consistent with a contact-sales/partnership research product, but the page never used gate-language explicitly, so &#x27;unclear&#x27; is defensible caution rather than a clean hit. Flagged as a partial miss: the model under-committed relative to what the (thin) evidence actually supports.</td>
+          </tr>
+          <tr class="border-b border-slate-800">
+            <td class="px-3 py-2 font-medium">iPayX</td>
+            <td class="px-3 py-2 text-xs">access_model</td>
+            <td class="px-3 py-2 text-xs text-rose-300">unclear</td>
+            <td class="px-3 py-2 text-xs text-emerald-300">gated_approval or gated_partnership</td>
+            <td class="px-3 py-2 text-xs text-slate-400">The only access path shown on the fetched page is &quot;Contact: info@ipayx.ai&quot; -- no self-serve signup or key-generation flow at all. That is itself evidence of gating, but access_model was left unclear instead of reflecting it.</td>
+          </tr>
+          <tr class="border-b border-slate-800">
+            <td class="px-3 py-2 font-medium">WhatsApp Business</td>
+            <td class="px-3 py-2 text-xs">auth_methods + access_model</td>
+            <td class="px-3 py-2 text-xs text-rose-300">not extracted at all (missing from results_pass1.json)</td>
+            <td class="px-3 py-2 text-xs text-emerald-300">auth: token-based (temporary test tokens -&gt; permanent tokens via system users); access: gated_approval (business verification + permission review)</td>
+            <td class="px-3 py-2 text-xs text-slate-400">Batch-level bookkeeping bug: this app&#x27;s batch had a schema-validation failure on a different app in the same call, and the checkpoint/failure-log resume logic (see extract.py) only preserved the LAST run&#x27;s failure list, silently losing this app&#x27;s record on an earlier resume. It is not a wrong answer, it is a missing one -- flagged here rather than hidden, and expected to self-resolve in pass 2&#x27;s full clean re-run.</td>
+          </tr></tbody>
+        </table>
+    <h3 class="text-sm font-semibold text-slate-300 mt-6 mb-1">Pass 2 misses (after hardening the prompt)</h3>
+    <p class="text-emerald-400 text-sm">No misses in this pass's sample.</p>
+  </section>
+
+  <!-- PROOF -->
+  <section class="mb-12">
+    <h2 class="text-lg font-semibold text-white mb-4 flex items-center gap-2"><span class="text-sky-400">05</span> Proof</h2>
+    <div class="grid md:grid-cols-2 gap-4 text-sm">
+      <a href="https://github.com/maggie7745/composio-app-research" target="_blank" class="rounded-lg border border-slate-800 p-4 hover:border-sky-600 transition block">
+        <div class="text-slate-200 font-medium mb-1">📦 Source repo</div>
+        <div class="text-slate-500 text-xs">Full pipeline, README with run instructions, all data files.</div>
+      </a>
+      <a href="https://github.com/maggie7745/composio-app-research#readme" target="_blank" class="rounded-lg border border-slate-800 p-4 hover:border-sky-600 transition block">
+        <div class="text-slate-200 font-medium mb-1">▶️ Runnable trigger</div>
+        <div class="text-slate-500 text-xs">python agent/fetch_docs.py → extract.py → crosscheck.py → synthesize.py → build_site.py</div>
+      </a>
+    </div>
+  </section>
+
+  <footer class="text-xs text-slate-600 border-t border-slate-800 pt-6 mt-10">
+    Built for the Composio AI Product Ops Intern take-home. All evidence links are the actual fetched source URLs; apps with no verifiable page are marked "unverified" rather than guessed.
+  </footer>
+
+<script>
+  const rows = [...document.querySelectorAll('.app-row')];
+  const catSel = document.getElementById('f-category');
+  const cats = [...new Set(rows.map(r => r.dataset.category))].sort();
+  cats.forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = c; catSel.appendChild(o); });
+
+  function applyFilters() {
+    const q = document.getElementById('search').value.toLowerCase();
+    const cat = catSel.value, acc = document.getElementById('f-access').value, build = document.getElementById('f-buildable').value;
+    let shown = 0;
+    rows.forEach(r => {
+      const ok = (!q || r.dataset.name.includes(q)) &&
+                 (!cat || r.dataset.category === cat) &&
+                 (!acc || r.dataset.access === acc) &&
+                 (!build || r.dataset.buildable === build);
+      r.style.display = ok ? '' : 'none';
+      if (ok) shown++;
+    });
+    document.getElementById('row-count').textContent = shown + ' / ' + rows.length + ' apps';
+  }
+  ['search','f-category','f-access','f-buildable'].forEach(id => {
+    document.getElementById(id).addEventListener('input', applyFilters);
+  });
+  applyFilters();
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+Title: Documentation - Lark Developer
+URL: https://open.larksuite.com/document
+Captured via browser tool (JS-rendered SPA, plain HTTP fetch returns empty shell) 2026-08-17
+---
+Customer Stories
+App Directory
+Documentation
+Changelog
+Developer Console
+Login
+HomeDeveloper GuidesServer APIClient APILark CLILark Plugin for OpenClaw
+API Explorer
+CardKit
+Lark developer documentation
+Developer's guides, tutorials and examples to make your development enjoyable and efficient
+Search
+Server APIs
+Events
+Permission scopes
+FAQs
+What's Trending
+How to call server-side APIs
+Custom apps development process
+Bot automatic pulls group alarm
+Overview of auto login
+Gadget host environment
+How do I obtain User ID, Open ID, and Union ID?
+Important Updates
+More
+Welcome to join the Lark Developer Community, to ask, share and exchange ideas with other Lark developers!
+Reach a whole new world of Message Cards, with the newly updated Message Card Builder!
+Lark CLI is now open source Empower your workflow with the open-source Lark CLI. Access and manage 12 business domains — including IM, Drive, Base, Calendar, and Meetings — directly from your agents. Licensed under MIT. Get started with a single command: npx @larksuite/cli@latest install Get started | GitHub | Feature wishlist
+Open capabilities
+Basic concepts
+Development process & app types
+Development process
+App types
+Custom app
+Store app
+Gadget
+Web app
+Bot
+User identities & access tokens
+User identities
+Access and scopes
+Auto login
+API access credentials
+Extensions
+AppLink
+Message card
+Capabilities overview
+Contacts
+73 APIs17 Events
+Messenger
+86 APIs13 Events
+Calendar
+40 APIs4 Events
+Drive
+41 APIs10 Events
+Doc
+12 APIs
+Sheet
+56 APIs
+Base
+2 Events
+Wiki
+14 APIs
+Rooms
+4 Events
+Video Conferencing
+71 APIs19 Events
+App Information
+22 APIs11 Events
+Email
+85 APIs1 Event
+Approval
+62 APIs7 Events
+Search
+2 APIs
+Company Information
+2 APIs
+Admin
+14 APIs
+AI
+8 APIs
+Attendance
+48 APIs1 Event
+Tools & resources
+1
+Getting started
+Server-side API debugging tools
+Tool
+Quickly debug server-side APIs, see sample code.
+Client-side sample code
+Resource
+View the sample code of gadget and web application to quickly start developing client applications.
+Design resources
+Resource
+Provide design specifications for gadget and message cards, and support downloading design resources.
+2
+Developing & debugging
+Gadget migration tool
+Tool
+Quickly migrate part of the code of the gadget of other platforms to Lark to reduce the development cost.
+Gadget/Web app development toolkit
+Tool
+Support the development, debugging, package upload and other functions of gadgets and web apps to improve development efficiency.
+Message card builder
+Tool
+Provide a wealth of message card case references, and you can build cards by simply dragging and dropping.
+3
+Testing & releasing
+Test companies & users
+Tool
+Create a test application in the test tenant to facilitate debugging of application permissions and modification of application configuration.
+4
+App management
+Log search
+Tool
+You can quickly trace back the exception logs of server and client API calls to facilitate troubleshooting.
+Solution
+SSO and Lark Integration
+Portal Access Lark

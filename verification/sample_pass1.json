@@ -1,0 +1,78 @@
+{
+  "pass": 1,
+  "method": "Hand + WebFetch verification against live vendor docs, for the 22 apps pre-registered in sample_plan.json (chosen before reading any pass-1 answer). Two fields judged per app: auth_methods and access_model -- the two fields the brief foregrounds and the two Tier-1 crosscheck already flagged as the weak spot. Where a fresh authoritative fetch was obtained, it is the ground truth. Where WebFetch could not reach a deeper page (redirect/404) or time did not allow a fresh fetch, the judgment is a consistency check: does pass-1's own evidence_quote actually support its stated verdict? An empty/generic evidence_quote backing a confident answer is scored a miss even without an independent source, because that is a fabrication-adjacent failure, not just an uncertain one.",
+  "n_apps": 22,
+  "total_judgments": 33,
+  "hits": 21,
+  "field_accuracy_pct": 63.6,
+  "note_on_denominator": "11 apps judged on auth_methods only (import stopped there when access_model was a defensible 'unclear' abstention); 11 apps judged on both fields.",
+  "misses": [
+    {
+      "app": "Salesforce", "field": "auth_methods",
+      "agent_answer": "[] (empty)",
+      "correct_answer": "OAUTH2 (also supports API-key-based External Client Apps for server-to-server)",
+      "why_wrong": "Pass-1's fetched page (developer.salesforce.com root) was a marketing/product-announcement page with no auth content. The real answer is one hop away at the OAuth authentication guide. Same nav-shell-page failure mode fixed for pass 2 (see pass2_rules.md #1)."
+    },
+    {
+      "app": "Twilio", "field": "auth_methods",
+      "agent_answer": "[] (empty)",
+      "correct_answer": "BASIC (Account SID/Auth Token, or API Key as username + secret as password)",
+      "why_wrong": "developers.twilio.com (pass-1's fetched URL) is an events/training hub, not API reference -- confirmed by hand during Tier 2, already recorded as a human_corrected_wrong_page override in fetch_docs.py pointing pass 2 at www.twilio.com/docs/usage/api instead."
+    },
+    {
+      "app": "Shopify", "field": "auth_methods",
+      "agent_answer": "[] (empty)",
+      "correct_answer": "OAUTH2 (authorization code grant for standalone apps) and API_KEY (access tokens, incl. Storefront API tokens)",
+      "why_wrong": "shopify.dev/docs (pass-1 URL) links out to the real authentication page without stating the mechanism itself -- another instance of the nav-shell/index-page problem."
+    },
+    {
+      "app": "Threads (Meta)", "field": "auth_methods",
+      "agent_answer": "[] (empty)",
+      "correct_answer": "OAUTH2 (\"Threads user access tokens that conform to the OAuth 2.0 protocol\")",
+      "why_wrong": "Pass-1 fetched the docs index (developers.facebook.com/docs/threads), which references the mechanism without naming it; the get-started subpage states it directly."
+    },
+    {
+      "app": "Threads (Meta)", "field": "access_model",
+      "agent_answer": "self_serve",
+      "correct_answer": "gated_approval",
+      "why_wrong": "This is the most consequential miss in the sample: pass 1 called Threads self-serve based on generic app-setup instructions, but the real page states each permission \"must first be approved through the App Review process, and your app must be published\" -- textbook approval-gated, not self-serve. Directly contradicts the headline self-serve % if left uncorrected."
+    },
+    {
+      "app": "Zendesk", "field": "auth_methods",
+      "agent_answer": "[] (empty)",
+      "correct_answer": "OAUTH2 (primary/recommended), API_KEY and BASIC (deprecated, being phased out)",
+      "why_wrong": "developers.zendesk.com (pass-1's fetched URL) is a dead page -- \"the help centre you're trying to reach no longer exists.\" The model correctly declined to guess from a dead page (good behavior) but the underlying URL was wrong. Already recorded as a human_corrected_dead_page override for pass 2."
+    },
+    {
+      "app": "GitHub", "field": "auth_methods",
+      "agent_answer": "[] (empty)",
+      "correct_answer": "OAUTH2 and API_KEY (personal access tokens / installation tokens)",
+      "why_wrong": "The single clearest case of the nav-shell bug: docs.github.com/rest fetched fine (HTTP 200) but yielded only a 1744-char sidebar/TOC shell. Root-caused during this verification pass, fixed at the pipeline level for pass 2 (agent/pass2_rules.md #1) and confirmed working (the same URL's shell page now correctly follows through to the 9783-char authenticating-to-the-rest-api page)."
+    },
+    {
+      "app": "Consensus", "field": "buildable_verdict (adjacent to access_model)",
+      "agent_answer": "buildable_now",
+      "correct_answer": "should be blocked or gated_approval",
+      "why_wrong": "Self-contradiction inside the pass-1 record: evidence_quote literally reads \"Enterprise customers only,\" yet access_model was left \"unclear\" and buildable_verdict was marked \"buildable_now\" -- the verdict ignores the model's own extracted evidence. A real reasoning-consistency failure, not a missing-data one."
+    },
+    {
+      "app": "PitchBook", "field": "access_model",
+      "agent_answer": "unclear",
+      "correct_answer": "gated_partnership (more specific and better-supported than 'unclear')",
+      "why_wrong": "PitchBook's own marketing page 403s a scripted fetch and offers only \"Request a free trial\" -- consistent with a contact-sales/partnership research product, but the page never used gate-language explicitly, so 'unclear' is defensible caution rather than a clean hit. Flagged as a partial miss: the model under-committed relative to what the (thin) evidence actually supports."
+    },
+    {
+      "app": "iPayX", "field": "access_model",
+      "agent_answer": "unclear",
+      "correct_answer": "gated_approval or gated_partnership",
+      "why_wrong": "The only access path shown on the fetched page is \"Contact: info@ipayx.ai\" -- no self-serve signup or key-generation flow at all. That is itself evidence of gating, but access_model was left unclear instead of reflecting it."
+    },
+    {
+      "app": "WhatsApp Business", "field": "auth_methods + access_model",
+      "agent_answer": "not extracted at all (missing from results_pass1.json)",
+      "correct_answer": "auth: token-based (temporary test tokens -> permanent tokens via system users); access: gated_approval (business verification + permission review)",
+      "why_wrong": "Batch-level bookkeeping bug: this app's batch had a schema-validation failure on a different app in the same call, and the checkpoint/failure-log resume logic (see extract.py) only preserved the LAST run's failure list, silently losing this app's record on an earlier resume. It is not a wrong answer, it is a missing one -- flagged here rather than hidden, and expected to self-resolve in pass 2's full clean re-run."
+    }
+  ],
+  "hits_summary": "Direct or well-evidenced hits: Notion (OAUTH2/API_KEY/BEARER_TOKEN, self_serve -- matches Notion's documented integration-token + public-OAuth model), Stripe (API_KEY, self_serve), Amazon Selling Partner (OAUTH2, gated_approval -- correctly identified the notorious SP-API registration gate), Ahrefs (API_KEY, gated_paid -- correctly identified the Enterprise-plan requirement), DealCloud (API_KEY, confirmed against api.docs.dealcloud.com), Waterfall.io (API_KEY, direct 'x-api-key header' evidence). Correct abstentions (evidence too thin to answer, and the model correctly said so rather than guessing): Twenty, Mailchimp, Otter AI, fanbasis, Clay, Paygent Connect (no page exists at all -- correctly left unfetched rather than fabricated)."
+}

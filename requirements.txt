@@ -1,0 +1,5 @@
+# No third-party dependencies -- the entire pipeline runs on the Python 3
+# standard library (urllib, html.parser, json, concurrent.futures) plus the
+# `claude` CLI already on PATH for the extraction step. This file exists so
+# `pip install -r requirements.txt` is a valid, harmless no-op for anyone
+# following the README literally.

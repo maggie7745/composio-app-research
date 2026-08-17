@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+data/pages/
+data/pages_pass1_snapshot/
+.DS_Store
+work/
+.agents/
+.claude/
+skills-lock.json

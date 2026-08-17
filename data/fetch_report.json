@@ -1,0 +1,902 @@
+[
+  {
+    "id": 1,
+    "name": "Salesforce",
+    "category": "CRM and Sales",
+    "fetched": true,
+    "source_url": "https://developer.salesforce.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 4704
+  },
+  {
+    "id": 2,
+    "name": "HubSpot",
+    "category": "CRM and Sales",
+    "fetched": true,
+    "source_url": "https://developers.hubspot.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 4458
+  },
+  {
+    "id": 3,
+    "name": "Pipedrive",
+    "category": "CRM and Sales",
+    "fetched": true,
+    "source_url": "https://developers.pipedrive.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 2170
+  },
+  {
+    "id": 4,
+    "name": "Attio",
+    "category": "CRM and Sales",
+    "fetched": true,
+    "source_url": "https://developers.attio.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 1214
+  },
+  {
+    "id": 5,
+    "name": "Twenty",
+    "category": "CRM and Sales",
+    "fetched": true,
+    "source_url": "https://developers.twenty.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 457
+  },
+  {
+    "id": 6,
+    "name": "Podio",
+    "category": "CRM and Sales",
+    "fetched": true,
+    "source_url": "https://developers.podio.com/authentication",
+    "fetch_method": "thin_page_link_followed",
+    "chars": 4386
+  },
+  {
+    "id": 7,
+    "name": "Zoho CRM",
+    "category": "CRM and Sales",
+    "fetched": true,
+    "source_url": "https://developers.zoho.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 3895
+  },
+  {
+    "id": 8,
+    "name": "Close",
+    "category": "CRM and Sales",
+    "fetched": true,
+    "source_url": "https://developer.close.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 2229
+  },
+  {
+    "id": 9,
+    "name": "Copper",
+    "category": "CRM and Sales",
+    "fetched": true,
+    "source_url": "https://developer.copper.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 1879
+  },
+  {
+    "id": 10,
+    "name": "DealCloud",
+    "category": "CRM and Sales",
+    "fetched": true,
+    "source_url": "https://api.docs.dealcloud.com/mcp/authentication",
+    "fetch_method": "thin_page_link_followed",
+    "chars": 3822
+  },
+  {
+    "id": 11,
+    "name": "Zendesk",
+    "category": "Support and Helpdesk",
+    "fetched": true,
+    "source_url": "https://developer.zendesk.com/api-reference/",
+    "fetch_method": "human_corrected_dead_page",
+    "chars": 2712
+  },
+  {
+    "id": 12,
+    "name": "Intercom",
+    "category": "Support and Helpdesk",
+    "fetched": true,
+    "source_url": "https://developers.intercom.com/docs/build-an-integration/getting-started/",
+    "fetch_method": "thin_page_link_followed",
+    "chars": 6910
+  },
+  {
+    "id": 13,
+    "name": "Freshdesk",
+    "category": "Support and Helpdesk",
+    "fetched": true,
+    "source_url": "https://developers.freshdesk.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 858
+  },
+  {
+    "id": 14,
+    "name": "Front",
+    "category": "Support and Helpdesk",
+    "fetched": true,
+    "source_url": "https://front.com/api",
+    "fetch_method": "docs_path_guess",
+    "chars": 5435
+  },
+  {
+    "id": 15,
+    "name": "Pylon",
+    "category": "Support and Helpdesk",
+    "fetched": true,
+    "source_url": "https://docs.usepylon.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 2506
+  },
+  {
+    "id": 16,
+    "name": "LiveAgent",
+    "category": "Support and Helpdesk",
+    "fetched": true,
+    "source_url": "https://liveagent.com",
+    "fetch_method": "brief_hint_root_fallback",
+    "chars": 11564
+  },
+  {
+    "id": 17,
+    "name": "Plain",
+    "category": "Support and Helpdesk",
+    "fetched": true,
+    "source_url": "https://docs.plain.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 2362
+  },
+  {
+    "id": 18,
+    "name": "Help Scout",
+    "category": "Support and Helpdesk",
+    "fetched": true,
+    "source_url": "https://developer.helpscout.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 2666
+  },
+  {
+    "id": 19,
+    "name": "Gorgias",
+    "category": "Support and Helpdesk",
+    "fetched": true,
+    "source_url": "https://developers.gorgias.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 1040
+  },
+  {
+    "id": 20,
+    "name": "Gladly",
+    "category": "Support and Helpdesk",
+    "fetched": true,
+    "source_url": "https://developer.gladly.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 1209
+  },
+  {
+    "id": 21,
+    "name": "Slack",
+    "category": "Communications and Messaging",
+    "fetched": true,
+    "source_url": "https://slack.com/getting-started",
+    "fetch_method": "thin_page_followup",
+    "chars": 4365
+  },
+  {
+    "id": 22,
+    "name": "Twilio",
+    "category": "Communications and Messaging",
+    "fetched": true,
+    "source_url": "https://www.twilio.com/docs/usage/api",
+    "fetch_method": "human_corrected_wrong_page",
+    "chars": 1587
+  },
+  {
+    "id": 23,
+    "name": "Zoho Cliq",
+    "category": "Communications and Messaging",
+    "fetched": true,
+    "source_url": "https://developers.zoho.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 3895
+  },
+  {
+    "id": 24,
+    "name": "Lark (Larksuite)",
+    "category": "Communications and Messaging",
+    "fetched": true,
+    "source_url": "https://open.larksuite.com/document",
+    "fetch_method": "browser_capture_js_spa",
+    "chars": 3164
+  },
+  {
+    "id": 25,
+    "name": "Pumble",
+    "category": "Communications and Messaging",
+    "fetched": true,
+    "source_url": "https://pumble.com",
+    "fetch_method": "brief_hint_root_fallback",
+    "chars": 4397
+  },
+  {
+    "id": 26,
+    "name": "Discord",
+    "category": "Communications and Messaging",
+    "fetched": true,
+    "source_url": "https://docs.discord.com/developers/quick-start/overview-of-apps",
+    "fetch_method": "thin_page_link_followed",
+    "chars": 4231
+  },
+  {
+    "id": 27,
+    "name": "Telegram",
+    "category": "Communications and Messaging",
+    "fetched": true,
+    "source_url": "https://core.telegram.org/developers",
+    "fetch_method": "docs_path_guess",
+    "chars": 381
+  },
+  {
+    "id": 28,
+    "name": "WhatsApp Business",
+    "category": "Communications and Messaging",
+    "fetched": true,
+    "source_url": "https://developers.facebook.com/docs/whatsapp",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 3412
+  },
+  {
+    "id": 29,
+    "name": "Aircall",
+    "category": "Communications and Messaging",
+    "fetched": true,
+    "source_url": "https://developers.aircall.io/tutorials/how-aircall-oauth-flow-works",
+    "fetch_method": "thin_page_link_followed",
+    "chars": 11809
+  },
+  {
+    "id": 30,
+    "name": "Vonage",
+    "category": "Communications and Messaging",
+    "fetched": true,
+    "source_url": "https://developer.vonage.com",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 10422
+  },
+  {
+    "id": 31,
+    "name": "Google Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "fetched": true,
+    "source_url": "https://developers.google.com/google-ads",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 1671
+  },
+  {
+    "id": 32,
+    "name": "Meta Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "fetched": true,
+    "source_url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authentication",
+    "fetch_method": "thin_page_link_followed",
+    "chars": 7794
+  },
+  {
+    "id": 33,
+    "name": "LinkedIn Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "fetched": true,
+    "source_url": "https://learn.microsoft.com/developer",
+    "fetch_method": "docs_path_guess",
+    "chars": 11696
+  },
+  {
+    "id": 34,
+    "name": "GoHighLevel",
+    "category": "Marketing, Ads, Email and Social",
+    "fetched": true,
+    "source_url": "https://marketplace.gohighlevel.com/docs/",
+    "fetch_method": "human_corrected_dead_hint",
+    "chars": 1781
+  },
+  {
+    "id": 35,
+    "name": "Mailchimp",
+    "category": "Marketing, Ads, Email and Social",
+    "fetched": true,
+    "source_url": "https://mailchimp.com/developer/marketing/guides/quick-start/",
+    "fetch_method": "thin_page_link_followed",
+    "chars": 3502
+  },
+  {
+    "id": 36,
+    "name": "Klaviyo",
+    "category": "Marketing, Ads, Email and Social",
+    "fetched": true,
+    "source_url": "https://developers.klaviyo.com",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 3237
+  },
+  {
+    "id": 37,
+    "name": "systeme.io",
+    "category": "Marketing, Ads, Email and Social",
+    "fetched": true,
+    "source_url": "https://developer.systeme.io",
+    "fetch_method": "docs_path_guess",
+    "chars": 6326
+  },
+  {
+    "id": 38,
+    "name": "Pinterest",
+    "category": "Marketing, Ads, Email and Social",
+    "fetched": true,
+    "source_url": "https://developers.pinterest.com/docs/getting-started",
+    "fetch_method": "thin_page_followup",
+    "chars": 3231
+  },
+  {
+    "id": 39,
+    "name": "Threads (Meta)",
+    "category": "Marketing, Ads, Email and Social",
+    "fetched": true,
+    "source_url": "https://developers.facebook.com/docs/threads",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 2169
+  },
+  {
+    "id": 40,
+    "name": "SendGrid",
+    "category": "Marketing, Ads, Email and Social",
+    "fetched": true,
+    "source_url": "https://docs.sendgrid.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 8719
+  },
+  {
+    "id": 41,
+    "name": "Shopify",
+    "category": "Ecommerce",
+    "fetched": true,
+    "source_url": "https://shopify.dev/docs",
+    "fetch_method": "docs_path_guess",
+    "chars": 3893
+  },
+  {
+    "id": 42,
+    "name": "WooCommerce",
+    "category": "Ecommerce",
+    "fetched": true,
+    "source_url": "https://developer.woocommerce.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 4493
+  },
+  {
+    "id": 43,
+    "name": "BigCommerce",
+    "category": "Ecommerce",
+    "fetched": true,
+    "source_url": "https://developer.bigcommerce.com",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 7562
+  },
+  {
+    "id": 44,
+    "name": "Salesforce Commerce Cloud",
+    "category": "Ecommerce",
+    "fetched": true,
+    "source_url": "https://developer.salesforce.com/docs/commerce",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 224
+  },
+  {
+    "id": 45,
+    "name": "Magento (Adobe Commerce)",
+    "category": "Ecommerce",
+    "fetched": true,
+    "source_url": "https://developer.adobe.com/authentication",
+    "fetch_method": "thin_page_followup",
+    "chars": 3700
+  },
+  {
+    "id": 46,
+    "name": "Squarespace",
+    "category": "Ecommerce",
+    "fetched": true,
+    "source_url": "https://developers.squarespace.com/quick-start",
+    "fetch_method": "thin_page_link_followed",
+    "chars": 3184
+  },
+  {
+    "id": 47,
+    "name": "Ecwid",
+    "category": "Ecommerce",
+    "fetched": true,
+    "source_url": "https://api-docs.ecwid.com",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 2693
+  },
+  {
+    "id": 48,
+    "name": "Gumroad",
+    "category": "Ecommerce",
+    "fetched": true,
+    "source_url": "https://gumroad.com/api",
+    "fetch_method": "browser_capture_js_spa",
+    "chars": 3294
+  },
+  {
+    "id": 49,
+    "name": "Amazon Selling Partner",
+    "category": "Ecommerce",
+    "fetched": true,
+    "source_url": "https://developer-docs.amazon.com/sp-api",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 5157
+  },
+  {
+    "id": 50,
+    "name": "fanbasis",
+    "category": "Ecommerce",
+    "fetched": true,
+    "source_url": "https://developers.fanbasis.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 6216
+  },
+  {
+    "id": 51,
+    "name": "DataForSEO",
+    "category": "Data, SEO and Scraping",
+    "fetched": true,
+    "source_url": "https://docs.dataforseo.com",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 4221
+  },
+  {
+    "id": 52,
+    "name": "SE Ranking",
+    "category": "Data, SEO and Scraping",
+    "fetched": true,
+    "source_url": "https://seranking.com/api.html",
+    "fetch_method": "human_corrected_path",
+    "chars": 12635
+  },
+  {
+    "id": 53,
+    "name": "Ahrefs",
+    "category": "Data, SEO and Scraping",
+    "fetched": true,
+    "source_url": "https://ahrefs.com/api",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 3314
+  },
+  {
+    "id": 54,
+    "name": "MrScraper",
+    "category": "Data, SEO and Scraping",
+    "fetched": true,
+    "source_url": "https://docs.mrscraper.com",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 5653
+  },
+  {
+    "id": 55,
+    "name": "Apify",
+    "category": "Data, SEO and Scraping",
+    "fetched": true,
+    "source_url": "https://docs.apify.com",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 3308
+  },
+  {
+    "id": 56,
+    "name": "Firecrawl",
+    "category": "Data, SEO and Scraping",
+    "fetched": true,
+    "source_url": "https://docs.firecrawl.dev",
+    "fetch_method": "docs_path_guess",
+    "chars": 10934
+  },
+  {
+    "id": 57,
+    "name": "Bright Data",
+    "category": "Data, SEO and Scraping",
+    "fetched": true,
+    "source_url": "https://docs.brightdata.com/api-reference/authentication",
+    "fetch_method": "thin_page_link_followed",
+    "chars": 7405
+  },
+  {
+    "id": 58,
+    "name": "Sherlock",
+    "category": "Data, SEO and Scraping",
+    "fetched": true,
+    "source_url": "https://developer.github.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 1149
+  },
+  {
+    "id": 59,
+    "name": "Waterfall.io",
+    "category": "Data, SEO and Scraping",
+    "fetched": true,
+    "source_url": "https://docs.waterfall.io",
+    "fetch_method": "docs_path_guess",
+    "chars": 1761
+  },
+  {
+    "id": 60,
+    "name": "Clay",
+    "category": "Data, SEO and Scraping",
+    "fetched": true,
+    "source_url": "https://developers.clay.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 1578
+  },
+  {
+    "id": 61,
+    "name": "GitHub",
+    "category": "Developer, Infra and Data platforms",
+    "fetched": true,
+    "source_url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+    "fetch_method": "thin_page_link_followed",
+    "chars": 9783
+  },
+  {
+    "id": 62,
+    "name": "Vercel",
+    "category": "Developer, Infra and Data platforms",
+    "fetched": true,
+    "source_url": "https://vercel.com/docs/rest-api",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 18000
+  },
+  {
+    "id": 63,
+    "name": "Netlify",
+    "category": "Developer, Infra and Data platforms",
+    "fetched": true,
+    "source_url": "https://docs.netlify.com/api",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 18000
+  },
+  {
+    "id": 64,
+    "name": "Cloudflare",
+    "category": "Developer, Infra and Data platforms",
+    "fetched": true,
+    "source_url": "https://developers.cloudflare.com/api/resources/origin_tls_client_auth/subresources/hostnames/methods/get",
+    "fetch_method": "thin_page_link_followed",
+    "chars": 8317
+  },
+  {
+    "id": 65,
+    "name": "Supabase",
+    "category": "Developer, Infra and Data platforms",
+    "fetched": true,
+    "source_url": "https://supabase.com/docs",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 3025
+  },
+  {
+    "id": 66,
+    "name": "Neo4j",
+    "category": "Developer, Infra and Data platforms",
+    "fetched": true,
+    "source_url": "https://neo4j.com/developer",
+    "fetch_method": "docs_path_guess",
+    "chars": 10069
+  },
+  {
+    "id": 67,
+    "name": "Snowflake",
+    "category": "Developer, Infra and Data platforms",
+    "fetched": true,
+    "source_url": "https://docs.snowflake.com",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 3586
+  },
+  {
+    "id": 68,
+    "name": "MongoDB Atlas",
+    "category": "Developer, Infra and Data platforms",
+    "fetched": true,
+    "source_url": "https://mongodb.com/docs/atlas/api",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 6071
+  },
+  {
+    "id": 69,
+    "name": "Datadog",
+    "category": "Developer, Infra and Data platforms",
+    "fetched": true,
+    "source_url": "https://docs.datadoghq.com/api",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 18000
+  },
+  {
+    "id": 70,
+    "name": "Sentry",
+    "category": "Developer, Infra and Data platforms",
+    "fetched": true,
+    "source_url": "https://docs.sentry.io/api/auth/",
+    "fetch_method": "thin_page_link_followed",
+    "chars": 18000
+  },
+  {
+    "id": 71,
+    "name": "Notion",
+    "category": "Productivity and Project Management",
+    "fetched": true,
+    "source_url": "https://developers.notion.com",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 6542
+  },
+  {
+    "id": 72,
+    "name": "Airtable",
+    "category": "Productivity and Project Management",
+    "fetched": true,
+    "source_url": "https://airtable.com/developers",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 3622
+  },
+  {
+    "id": 73,
+    "name": "Linear",
+    "category": "Productivity and Project Management",
+    "fetched": true,
+    "source_url": "https://developers.linear.app",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 826
+  },
+  {
+    "id": 74,
+    "name": "Jira",
+    "category": "Productivity and Project Management",
+    "fetched": true,
+    "source_url": "https://developer.atlassian.com",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 276
+  },
+  {
+    "id": 75,
+    "name": "Asana",
+    "category": "Productivity and Project Management",
+    "fetched": true,
+    "source_url": "https://developers.asana.com",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 1703
+  },
+  {
+    "id": 76,
+    "name": "Monday.com",
+    "category": "Productivity and Project Management",
+    "fetched": true,
+    "source_url": "https://developer.monday.com",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 4226
+  },
+  {
+    "id": 77,
+    "name": "ClickUp",
+    "category": "Productivity and Project Management",
+    "fetched": true,
+    "source_url": "https://clickup.com/api",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 645
+  },
+  {
+    "id": 78,
+    "name": "Coda",
+    "category": "Productivity and Project Management",
+    "fetched": true,
+    "source_url": "https://coda.io/developers",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 18000
+  },
+  {
+    "id": 79,
+    "name": "Smartsheet",
+    "category": "Productivity and Project Management",
+    "fetched": true,
+    "source_url": "https://smartsheet.com/developers",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 1267
+  },
+  {
+    "id": 80,
+    "name": "Harvest",
+    "category": "Productivity and Project Management",
+    "fetched": true,
+    "source_url": "https://developers.harvestapp.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 223
+  },
+  {
+    "id": 81,
+    "name": "Stripe",
+    "category": "Finance and Fintech",
+    "fetched": true,
+    "source_url": "https://stripe.com/docs/api",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 8396
+  },
+  {
+    "id": 82,
+    "name": "Plaid",
+    "category": "Finance and Fintech",
+    "fetched": true,
+    "source_url": "https://plaid.com/docs",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 4686
+  },
+  {
+    "id": 83,
+    "name": "Binance",
+    "category": "Finance and Fintech",
+    "fetched": false,
+    "source_url": null,
+    "fetch_method": null,
+    "chars": 0
+  },
+  {
+    "id": 84,
+    "name": "Paygent Connect",
+    "category": "Finance and Fintech",
+    "fetched": false,
+    "source_url": null,
+    "fetch_method": null,
+    "chars": 0
+  },
+  {
+    "id": 85,
+    "name": "iPayX",
+    "category": "Finance and Fintech",
+    "fetched": true,
+    "source_url": "https://ipayx.ai/docs",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 916
+  },
+  {
+    "id": 86,
+    "name": "QuickBooks",
+    "category": "Finance and Fintech",
+    "fetched": true,
+    "source_url": "https://developer.intuit.com/app/developer/qbo/docs/get-started",
+    "fetch_method": "browser_capture_js_spa",
+    "chars": 987
+  },
+  {
+    "id": 87,
+    "name": "Xero",
+    "category": "Finance and Fintech",
+    "fetched": true,
+    "source_url": "https://developer.xero.com",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 4991
+  },
+  {
+    "id": 88,
+    "name": "Brex",
+    "category": "Finance and Fintech",
+    "fetched": true,
+    "source_url": "https://developer.brex.com",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 2064
+  },
+  {
+    "id": 89,
+    "name": "Ramp",
+    "category": "Finance and Fintech",
+    "fetched": true,
+    "source_url": "https://docs.ramp.com",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 949
+  },
+  {
+    "id": 90,
+    "name": "PitchBook",
+    "category": "Finance and Fintech",
+    "fetched": true,
+    "source_url": "https://pitchbook.com",
+    "fetch_method": "brief_hint_root_fallback",
+    "chars": 1949
+  },
+  {
+    "id": 91,
+    "name": "NotebookLM",
+    "category": "AI, Research and Media-native",
+    "fetched": true,
+    "source_url": "https://docs.cloud.google.com/docs/get-started/",
+    "fetch_method": "thin_page_link_followed",
+    "chars": 5011
+  },
+  {
+    "id": 92,
+    "name": "Otter AI",
+    "category": "AI, Research and Media-native",
+    "fetched": true,
+    "source_url": "https://help.otter.ai",
+    "fetch_method": "brief_hint_root_fallback",
+    "chars": 2237
+  },
+  {
+    "id": 93,
+    "name": "Fathom",
+    "category": "AI, Research and Media-native",
+    "fetched": true,
+    "source_url": "https://fathom.video",
+    "fetch_method": "brief_hint_root_fallback",
+    "chars": 6468
+  },
+  {
+    "id": 94,
+    "name": "Consensus",
+    "category": "AI, Research and Media-native",
+    "fetched": true,
+    "source_url": "https://docs.consensus.app",
+    "fetch_method": "docs_path_guess",
+    "chars": 3073
+  },
+  {
+    "id": 95,
+    "name": "Reducto",
+    "category": "AI, Research and Media-native",
+    "fetched": true,
+    "source_url": "https://docs.reducto.ai",
+    "fetch_method": "docs_path_guess",
+    "chars": 3725
+  },
+  {
+    "id": 96,
+    "name": "Devin",
+    "category": "AI, Research and Media-native",
+    "fetched": true,
+    "source_url": "https://docs.devin.ai",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 5938
+  },
+  {
+    "id": 97,
+    "name": "higgsfield",
+    "category": "AI, Research and Media-native",
+    "fetched": true,
+    "source_url": "https://docs.higgsfield.ai",
+    "fetch_method": "docs_path_guess",
+    "chars": 1804
+  },
+  {
+    "id": 98,
+    "name": "Mermaid CLI",
+    "category": "AI, Research and Media-native",
+    "fetched": true,
+    "source_url": "https://developer.github.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 1149
+  },
+  {
+    "id": 99,
+    "name": "YouTube Transcript",
+    "category": "AI, Research and Media-native",
+    "fetched": true,
+    "source_url": "https://transcriptapi.com",
+    "fetch_method": "brief_hint_is_docs",
+    "chars": 13620
+  },
+  {
+    "id": 100,
+    "name": "Grain",
+    "category": "AI, Research and Media-native",
+    "fetched": true,
+    "source_url": "https://developers.grain.com",
+    "fetch_method": "docs_path_guess",
+    "chars": 18000
+  }
+]

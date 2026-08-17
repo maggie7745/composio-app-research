@@ -1,0 +1,27 @@
+[
+  {
+    "app_id": 68,
+    "name": "MongoDB Atlas",
+    "errors": [
+      "evidence_quote not found verbatim in source text (possible fabrication)"
+    ],
+    "record": {
+      "id": 68,
+      "one_liner": "Managed MongoDB cloud database platform with administrative and provisioning APIs",
+      "auth_methods": [],
+      "access_model": "self_serve",
+      "access_evidence": "Page describes configuring API access via a self-guided 'Get Started with the Atlas Administration API' resource rather than a sales or approval process.",
+      "api_surface": "REST-based Atlas Administration API (with Postman workspace and OpenAPI spec) plus Go SDK, CLI, Terraform provider, CDK, CloudFormation, and Kubernetes Operator; also a separate Embedding and Reranking REST API",
+      "api_style": "REST",
+      "has_official_mcp": null,
+      "mcp_evidence": null,
+      "buildable_verdict": "buildable_now",
+      "blocker": null,
+      "rate_limits": null,
+      "paid_tier_required_for_api": null,
+      "sandbox_available": null,
+      "confidence": 0.5,
+      "evidence_quote": "To configure access for the Atlas Administration API, see Get Started with the Atlas Administration API."
+    }
+  }
+]

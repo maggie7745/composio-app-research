@@ -1,0 +1,30 @@
+{
+  "note": "Stratified verification sample, chosen BEFORE reading pass-1 results (written while pass-1 extraction was still running in the background). Pre-registering the sample before seeing the agent's answers is the point: picking the sample after seeing results would let the sample quietly favor apps the agent got right.",
+  "selection_rule": "At least one app per category. Within that, deliberately weighted toward apps expected to be hard (partner-gated fintech, data-broker/enterprise research tools, apps with dead/JS-only docs) plus a few well-known apps as an easy-case control group, so the accuracy number isn't just measuring the easy half of the set.",
+  "sample": [
+    {"name": "Salesforce", "category": "CRM and Sales", "why": "mainstream control -- well-documented, should be easy"},
+    {"name": "DealCloud", "category": "CRM and Sales", "why": "expected hard -- niche enterprise CRM, likely partner-gated"},
+    {"name": "Twenty", "category": "CRM and Sales", "why": "open-source -- tests whether the agent handles OSS/self-hosted differently from SaaS"},
+    {"name": "Zendesk", "category": "Support and Helpdesk", "why": "mainstream control"},
+    {"name": "Twilio", "category": "Communications and Messaging", "why": "mainstream control, complex multi-product auth"},
+    {"name": "WhatsApp Business", "category": "Communications and Messaging", "why": "expected hard -- Meta's approval-gated Business API"},
+    {"name": "Mailchimp", "category": "Marketing, Ads, Email and Social", "why": "mainstream control"},
+    {"name": "Threads (Meta)", "category": "Marketing, Ads, Email and Social", "why": "expected hard -- newer Meta API, approval flow"},
+    {"name": "Shopify", "category": "Ecommerce", "why": "mainstream control"},
+    {"name": "Amazon Selling Partner", "category": "Ecommerce", "why": "expected hard -- notoriously gated approval process"},
+    {"name": "fanbasis", "category": "Ecommerce", "why": "expected hard -- small/niche vendor, brief flags it lightly documented"},
+    {"name": "Ahrefs", "category": "Data, SEO and Scraping", "why": "expected hard -- known to be paid-tier gated for API access"},
+    {"name": "Clay", "category": "Data, SEO and Scraping", "why": "expected hard -- go-to-market tool, API access model unclear from marketing site"},
+    {"name": "Waterfall.io", "category": "Data, SEO and Scraping", "why": "expected hard -- brief's own hint says 'contact/company intel', likely partnership-gated"},
+    {"name": "GitHub", "category": "Developer, Infra and Data platforms", "why": "mainstream control -- extremely well documented, should be near-perfect"},
+    {"name": "Notion", "category": "Productivity and Project Management", "why": "mainstream control"},
+    {"name": "Stripe", "category": "Finance and Fintech", "why": "mainstream control -- gold-standard API docs"},
+    {"name": "PitchBook", "category": "Finance and Fintech", "why": "expected hard -- 403-blocked during fetch, enterprise research product"},
+    {"name": "Paygent Connect", "category": "Finance and Fintech", "why": "expected hard -- brief's own hint isn't a resolvable URL"},
+    {"name": "iPayX", "category": "Finance and Fintech", "why": "expected hard -- small fintech, thin public docs"},
+    {"name": "Consensus", "category": "AI, Research and Media-native", "why": "expected hard -- brief flags 'OAuth requested', suggesting a non-standard or in-progress auth story"},
+    {"name": "Otter AI", "category": "AI, Research and Media-native", "why": "brief flags 'MCP server' -- tests whether the agent correctly finds/confirms that"}
+  ],
+  "sample_size": 22,
+  "categories_covered": 10
+}

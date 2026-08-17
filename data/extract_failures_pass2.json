@@ -1,0 +1,132 @@
+[
+  {
+    "app_id": 6,
+    "name": "Podio",
+    "errors": [
+      "evidence_quote not found verbatim in source text (possible fabrication)"
+    ],
+    "record": {
+      "id": 6,
+      "one_liner": "Work-management platform with an OAuth2-based API supporting multiple authentication flows for integrations.",
+      "auth_methods": [
+        "OAUTH2"
+      ],
+      "access_model": "self_serve",
+      "access_evidence": "Developers register their own application to receive a Client ID and Client Secret directly, with no mention of sales contact or approval gating.",
+      "api_surface": "OAuth2-authenticated API with four flows (server-side, client-side, username/password, app authentication); endpoints not detailed on this auth page",
+      "api_style": "unclear",
+      "has_official_mcp": null,
+      "mcp_evidence": null,
+      "buildable_verdict": "buildable_now",
+      "blocker": null,
+      "rate_limits": null,
+      "paid_tier_required_for_api": null,
+      "sandbox_available": null,
+      "confidence": 0.8,
+      "evidence_quote": "Before you can use the Podio API you must register your application. Your application is assigned a unique identifier, called \"Client ID\", together with a \"Client Secret\""
+    }
+  },
+  {
+    "app_id": 19,
+    "name": "Gorgias",
+    "errors": [
+      "evidence_quote not found verbatim in source text (possible fabrication)"
+    ],
+    "record": {
+      "id": 19,
+      "one_liner": "Platform for building public or private apps that integrate with Gorgias's customer support helpdesk.",
+      "auth_methods": [],
+      "access_model": "gated_approval",
+      "access_evidence": "Public apps must be submitted and reviewed/approved before being published in the App Store, though private apps require no approval.",
+      "api_surface": "not detailed on this page; API documentation is linked separately",
+      "api_style": "unclear",
+      "has_official_mcp": null,
+      "mcp_evidence": null,
+      "buildable_verdict": "buildable_with_workaround",
+      "blocker": "Public app publishing requires Gorgias review and approval; the auth mechanism itself is not specified on this page.",
+      "rate_limits": null,
+      "paid_tier_required_for_api": null,
+      "sandbox_available": null,
+      "confidence": 0.5,
+      "evidence_quote": "We'll review it and let you know once it's approved and ready to be published in our App Store. For Private apps there is no need for approval."
+    }
+  },
+  {
+    "app_id": 22,
+    "name": "Twilio",
+    "errors": [
+      "evidence_quote not found verbatim in source text (possible fabrication)"
+    ],
+    "record": {
+      "id": 22,
+      "one_liner": "Communications APIs for sending messages, making calls, and looking up phone numbers, built on REST.",
+      "auth_methods": [],
+      "access_model": "unclear",
+      "access_evidence": "The page references authenticating requests but does not name a specific auth mechanism or describe signup/gating on this page.",
+      "api_surface": "REST, multiple product APIs (e.g., Messaging) accessible directly over HTTPS or via SDKs",
+      "api_style": "REST",
+      "has_official_mcp": null,
+      "mcp_evidence": null,
+      "buildable_verdict": "buildable_with_workaround",
+      "blocker": "The specific authentication mechanism is only linked, not described, on this page.",
+      "rate_limits": null,
+      "paid_tier_required_for_api": null,
+      "sandbox_available": null,
+      "confidence": 0.4,
+      "evidence_quote": "The Twilio APIs are organized around REST."
+    }
+  },
+  {
+    "app_id": 70,
+    "name": "Sentry",
+    "errors": [
+      "evidence_quote not found verbatim in source text (possible fabrication)"
+    ],
+    "record": {
+      "id": 70,
+      "one_liner": "Error-tracking and application monitoring platform with a REST API for managing projects, issues, and releases.",
+      "auth_methods": [
+        "BEARER_TOKEN",
+        "OAUTH2"
+      ],
+      "access_model": "self_serve",
+      "access_evidence": "Developers can create authentication tokens themselves within Sentry via an internal integration, without contacting sales.",
+      "api_surface": "REST API spanning Crons, Dashboards, Discover & Performance, Environments, Events & Issues, Explore, Integration Platform, Integrations, Mobile Builds, Monitors & Alerts, Organizations, Profiling, Projects, Releases, Replays, SCIM, Seer, Snapshots, Spike Protection Notifications, Teams, and Users.",
+      "api_style": "REST",
+      "has_official_mcp": null,
+      "mcp_evidence": null,
+      "buildable_verdict": "buildable_now",
+      "blocker": null,
+      "rate_limits": null,
+      "paid_tier_required_for_api": null,
+      "sandbox_available": true,
+      "confidence": 0.75,
+      "evidence_quote": "You can create authentication tokens within Sentry by creating an internal integration."
+    }
+  },
+  {
+    "app_id": 96,
+    "name": "Devin",
+    "errors": [
+      "evidence_quote not found verbatim in source text (possible fabrication)"
+    ],
+    "record": {
+      "id": 96,
+      "one_liner": "Autonomous AI software engineer that writes, tests, and ships code for tickets, features, bugs, and refactors.",
+      "auth_methods": [],
+      "access_model": "self_serve",
+      "access_evidence": "The page states developers can sign up directly at app.devin.ai with Individual and Teams plans, without mentioning any sales contact or approval step.",
+      "api_surface": "A 'Devin API' is referenced by name and linked, but no endpoint, parameter, or auth details are given on this page.",
+      "api_style": "unclear",
+      "has_official_mcp": null,
+      "mcp_evidence": null,
+      "buildable_verdict": "buildable_with_workaround",
+      "blocker": "No API reference details (endpoints, request/response format, authentication) are present on this page, only a link to 'Devin API'.",
+      "rate_limits": null,
+      "paid_tier_required_for_api": null,
+      "sandbox_available": null,
+      "confidence": 0.4,
+      "evidence_quote": "To access Devin, sign up at app.devin.ai. Individual and Teams plans are available."
+    }
+  }
+]

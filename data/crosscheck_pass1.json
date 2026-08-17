@@ -1,0 +1,1198 @@
+{
+  "pass": 1,
+  "checked": 58,
+  "agree": 6,
+  "disagree_or_partial": 52,
+  "agreement_rate": 0.103,
+  "overlap_rate": 0.276,
+  "overlap_rate_note": "exact-match agreement understates real accuracy: Composio's Auth field is a terse one-line summary and often omits a secondary method the vendor's own page documents (e.g. GitHub's page genuinely describes both OAuth2 AND personal-access-token auth; Composio's field lists only OAUTH2). overlap_rate counts any shared method as a correct partial hit, which is the fairer number; agreement_rate (exact set equality) is kept alongside it rather than hidden, since it's the stricter and more conservative claim.",
+  "skipped_not_in_composio_registry": 39,
+  "skipped_no_extraction_yet": [
+    "Pipedrive",
+    "Intercom",
+    "WhatsApp Business"
+  ],
+  "rows": [
+    {
+      "id": 53,
+      "name": "Ahrefs",
+      "category": "Data, SEO and Scraping",
+      "composio_auth": [
+        "API_KEY"
+      ],
+      "our_auth": [
+        "API_KEY"
+      ],
+      "composio_normalized": [
+        "API_KEY"
+      ],
+      "our_normalized": [
+        "API_KEY"
+      ],
+      "our_confidence": 0.6,
+      "our_evidence_quote": "Free test queries\nTry API endpoints without an Enterprise plan",
+      "our_source_url": "https://ahrefs.com/api",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/ahrefs",
+      "verdict": "agree"
+    },
+    {
+      "id": 73,
+      "name": "Linear",
+      "category": "Productivity and Project Management",
+      "composio_auth": [
+        "OAUTH2",
+        "API_KEY"
+      ],
+      "our_auth": [
+        "OAUTH2",
+        "API_KEY"
+      ],
+      "composio_normalized": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_normalized": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_confidence": 0.55,
+      "our_evidence_quote": "Use OAuth 2.0 or personal API keys to authenticate your requests to the Linear API",
+      "our_source_url": "https://developers.linear.app",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/linear",
+      "verdict": "agree"
+    },
+    {
+      "id": 76,
+      "name": "Monday.com",
+      "category": "Productivity and Project Management",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [
+        "OAUTH2"
+      ],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [
+        "OAUTH2"
+      ],
+      "our_confidence": 0.7,
+      "our_evidence_quote": "Open a developer account",
+      "our_source_url": "https://developer.monday.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/monday",
+      "verdict": "agree"
+    },
+    {
+      "id": 54,
+      "name": "MrScraper",
+      "category": "Data, SEO and Scraping",
+      "composio_auth": [
+        "API_KEY"
+      ],
+      "our_auth": [
+        "API_KEY"
+      ],
+      "composio_normalized": [
+        "API_KEY"
+      ],
+      "our_normalized": [
+        "API_KEY"
+      ],
+      "our_confidence": 0.55,
+      "our_evidence_quote": "New to MrScraper? These pages get you from sign-up to your first scraped dataset.",
+      "our_source_url": "https://docs.mrscraper.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/mrscraper",
+      "verdict": "agree"
+    },
+    {
+      "id": 40,
+      "name": "SendGrid",
+      "category": "Marketing, Ads, Email and Social",
+      "composio_auth": [
+        "API_KEY"
+      ],
+      "our_auth": [
+        "API_KEY"
+      ],
+      "composio_normalized": [
+        "API_KEY"
+      ],
+      "our_normalized": [
+        "API_KEY"
+      ],
+      "our_confidence": 0.45,
+      "our_evidence_quote": null,
+      "our_source_url": "https://docs.sendgrid.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/sendgrid",
+      "verdict": "agree"
+    },
+    {
+      "id": 87,
+      "name": "Xero",
+      "category": "Finance and Fintech",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [
+        "OAUTH2"
+      ],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [
+        "OAUTH2"
+      ],
+      "our_confidence": 0.65,
+      "our_evidence_quote": "Sign up for a free account to build on the Xero platform.",
+      "our_source_url": "https://developer.xero.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/xero",
+      "verdict": "agree"
+    },
+    {
+      "id": 72,
+      "name": "Airtable",
+      "category": "Productivity and Project Management",
+      "composio_auth": [
+        "OAUTH2",
+        "API_KEY"
+      ],
+      "our_auth": [
+        "OAUTH2"
+      ],
+      "composio_normalized": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_normalized": [
+        "OAUTH2"
+      ],
+      "our_confidence": 0.45,
+      "our_evidence_quote": null,
+      "our_source_url": "https://airtable.com/developers",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/airtable",
+      "verdict": "partial_overlap"
+    },
+    {
+      "id": 55,
+      "name": "Apify",
+      "category": "Data, SEO and Scraping",
+      "composio_auth": [
+        "API_KEY"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "API_KEY"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.4,
+      "our_evidence_quote": null,
+      "our_source_url": "https://docs.apify.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/apify",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 75,
+      "name": "Asana",
+      "category": "Productivity and Project Management",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [
+        "API_KEY"
+      ],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [
+        "API_KEY"
+      ],
+      "our_confidence": 0.55,
+      "our_evidence_quote": "New to the Asana API? Build your first app with our step by step quick start guide. Learn to create and authorize with a token then create tasks via the API.",
+      "our_source_url": "https://developers.asana.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/asana",
+      "verdict": "disagree"
+    },
+    {
+      "id": 4,
+      "name": "Attio",
+      "category": "CRM and Sales",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.4,
+      "our_evidence_quote": null,
+      "our_source_url": "https://developers.attio.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/attio",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 88,
+      "name": "Brex",
+      "category": "Finance and Fintech",
+      "composio_auth": [
+        "OAUTH2",
+        "API_KEY"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.5,
+      "our_evidence_quote": "Check out our\nquickstart guide\nto get up and running making your first Brex API call in just a few minutes.",
+      "our_source_url": "https://developer.brex.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/brex",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 57,
+      "name": "Bright Data",
+      "category": "Data, SEO and Scraping",
+      "composio_auth": [
+        "API_KEY"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "API_KEY"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.5,
+      "our_evidence_quote": "No credit card required.",
+      "our_source_url": "https://docs.brightdata.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/brightdata",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 77,
+      "name": "ClickUp",
+      "category": "Productivity and Project Management",
+      "composio_auth": [
+        "OAUTH2",
+        "API_KEY"
+      ],
+      "our_auth": [
+        "OAUTH2"
+      ],
+      "composio_normalized": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_normalized": [
+        "OAUTH2"
+      ],
+      "our_confidence": 0.6,
+      "our_evidence_quote": "Try the API",
+      "our_source_url": "https://clickup.com/api",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/clickup",
+      "verdict": "partial_overlap"
+    },
+    {
+      "id": 8,
+      "name": "Close",
+      "category": "CRM and Sales",
+      "composio_auth": [
+        "API_KEY"
+      ],
+      "our_auth": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "composio_normalized": [
+        "API_KEY"
+      ],
+      "our_normalized": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_confidence": 0.6,
+      "our_evidence_quote": "API keys for scripts or OAuth 2.0 for user-facing integrations.",
+      "our_source_url": "https://developer.close.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/close",
+      "verdict": "partial_overlap"
+    },
+    {
+      "id": 64,
+      "name": "Cloudflare",
+      "category": "Developer, Infra and Data platforms",
+      "composio_auth": [
+        "API_KEY"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "API_KEY"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.45,
+      "our_evidence_quote": null,
+      "our_source_url": "https://developers.cloudflare.com/api",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/cloudflare",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 78,
+      "name": "Coda",
+      "category": "Productivity and Project Management",
+      "composio_auth": [
+        "API_KEY"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "API_KEY"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.65,
+      "our_evidence_quote": null,
+      "our_source_url": "https://coda.io/developers",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/coda",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 51,
+      "name": "DataForSEO",
+      "category": "Data, SEO and Scraping",
+      "composio_auth": [
+        "BASIC"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "BASIC"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.65,
+      "our_evidence_quote": "4. Free Unlimited Trial Info",
+      "our_source_url": "https://docs.dataforseo.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/dataforseo",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 69,
+      "name": "Datadog",
+      "category": "Developer, Infra and Data platforms",
+      "composio_auth": [
+        "OAUTH2",
+        "API_KEY",
+        "BEARER_TOKEN"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "API_KEY",
+        "BEARER_TOKEN",
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.1,
+      "our_evidence_quote": null,
+      "our_source_url": "https://docs.datadoghq.com/api",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/datadog",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 96,
+      "name": "Devin",
+      "category": "AI, Research and Media-native",
+      "composio_auth": [
+        "API_KEY"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "API_KEY"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.3,
+      "our_evidence_quote": "Individual and Teams plans are available.",
+      "our_source_url": "https://docs.devin.ai",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/devin_mcp",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 26,
+      "name": "Discord",
+      "category": "Communications and Messaging",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.35,
+      "our_evidence_quote": "Build automated apps, commands, and integrations that run inside Discord servers.",
+      "our_source_url": "https://docs.discord.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/discord",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 93,
+      "name": "Fathom",
+      "category": "AI, Research and Media-native",
+      "composio_auth": [
+        "OAUTH2",
+        "API_KEY"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.15,
+      "our_evidence_quote": "Get started - free forever",
+      "our_source_url": "https://fathom.video",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/fathom",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 56,
+      "name": "Firecrawl",
+      "category": "Data, SEO and Scraping",
+      "composio_auth": [
+        "API_KEY"
+      ],
+      "our_auth": [
+        "API_KEY",
+        "BEARER_TOKEN",
+        "NO_AUTH"
+      ],
+      "composio_normalized": [
+        "API_KEY"
+      ],
+      "our_normalized": [
+        "API_KEY",
+        "BEARER_TOKEN",
+        "NO_AUTH"
+      ],
+      "our_confidence": 0.75,
+      "our_evidence_quote": "Get your API key\nCreate a free account for direct API access and higher limits",
+      "our_source_url": "https://docs.firecrawl.dev",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/firecrawl",
+      "verdict": "partial_overlap"
+    },
+    {
+      "id": 13,
+      "name": "Freshdesk",
+      "category": "Support and Helpdesk",
+      "composio_auth": [
+        "API_KEY"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "API_KEY"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.45,
+      "our_evidence_quote": "Don't have a Freshdesk account?\nSignup for free",
+      "our_source_url": "https://developers.freshdesk.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/freshdesk",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 61,
+      "name": "GitHub",
+      "category": "Developer, Infra and Data platforms",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.45,
+      "our_evidence_quote": null,
+      "our_source_url": "https://docs.github.com/rest",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/github",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 34,
+      "name": "GoHighLevel",
+      "category": "Marketing, Ads, Email and Social",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [
+        "OAUTH2",
+        "API_KEY"
+      ],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_confidence": 0.55,
+      "our_evidence_quote": "Start Building Now",
+      "our_source_url": "https://marketplace.gohighlevel.com/docs/",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/highlevel",
+      "verdict": "partial_overlap"
+    },
+    {
+      "id": 31,
+      "name": "Google Ads",
+      "category": "Marketing, Ads, Email and Social",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.3,
+      "our_evidence_quote": "Google Ads API and Google Ads scripts\nSave time by automating your Google Ads campaign management. Build an application to interact directly with the Google Ads platform or write programmatic scripts.",
+      "our_source_url": "https://developers.google.com/google-ads",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/googleads",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 19,
+      "name": "Gorgias",
+      "category": "Support and Helpdesk",
+      "composio_auth": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.55,
+      "our_evidence_quote": "For Private apps there is no need for approval. Go ahead and use it!",
+      "our_source_url": "https://developers.gorgias.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/gorgias",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 48,
+      "name": "Gumroad",
+      "category": "Ecommerce",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [
+        "OAUTH2",
+        "API_KEY"
+      ],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_confidence": 0.8,
+      "our_evidence_quote": "To start using the API, you'll need to register your OAuth application.",
+      "our_source_url": "https://gumroad.com/api",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/gumroad",
+      "verdict": "partial_overlap"
+    },
+    {
+      "id": 80,
+      "name": "Harvest",
+      "category": "Productivity and Project Management",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.3,
+      "our_evidence_quote": "Sign up for free",
+      "our_source_url": "https://developers.harvestapp.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/harvest",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 18,
+      "name": "Help Scout",
+      "category": "Support and Helpdesk",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.05,
+      "our_evidence_quote": null,
+      "our_source_url": "https://developer.helpscout.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/help_scout",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 2,
+      "name": "HubSpot",
+      "category": "CRM and Sales",
+      "composio_auth": [
+        "OAUTH2",
+        "API_KEY"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.25,
+      "our_evidence_quote": null,
+      "our_source_url": "https://developers.hubspot.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/hubspot",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 74,
+      "name": "Jira",
+      "category": "Productivity and Project Management",
+      "composio_auth": [
+        "OAUTH2",
+        "S2S_OAUTH2",
+        "API_KEY"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.2,
+      "our_evidence_quote": null,
+      "our_source_url": "https://developer.atlassian.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/jira",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 36,
+      "name": "Klaviyo",
+      "category": "Marketing, Ads, Email and Social",
+      "composio_auth": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.6,
+      "our_evidence_quote": "Get started for free.",
+      "our_source_url": "https://developers.klaviyo.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/klaviyo",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 33,
+      "name": "LinkedIn Ads",
+      "category": "Marketing, Ads, Email and Social",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.05,
+      "our_evidence_quote": null,
+      "our_source_url": "https://learn.microsoft.com/developer",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/linkedin_ads",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 35,
+      "name": "Mailchimp",
+      "category": "Marketing, Ads, Email and Social",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.35,
+      "our_evidence_quote": "As an Integration Partner, you\u2019ll have access to exclusive benefits, insights, and opportunities to grow your business.",
+      "our_source_url": "https://mailchimp.com/developer",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/mailchimp",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 32,
+      "name": "Meta Ads",
+      "category": "Marketing, Ads, Email and Social",
+      "composio_auth": [
+        "OAUTH2",
+        "API_KEY"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.35,
+      "our_evidence_quote": "Begin creating and managing Meta ad campaigns by following step-by-step guidance on setting up campaigns, ad sets, and creatives using the Marketing API",
+      "our_source_url": "https://developers.facebook.com/docs/marketing-apis",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/metaads",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 66,
+      "name": "Neo4j",
+      "category": "Developer, Infra and Data platforms",
+      "composio_auth": [
+        "OAUTH2",
+        "BASIC",
+        "API_KEY",
+        "S2S_OAUTH2"
+      ],
+      "our_auth": [
+        "BASIC"
+      ],
+      "composio_normalized": [
+        "API_KEY",
+        "BASIC",
+        "OAUTH2"
+      ],
+      "our_normalized": [
+        "BASIC"
+      ],
+      "our_confidence": 0.4,
+      "our_evidence_quote": "Get started free",
+      "our_source_url": "https://neo4j.com/developer",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/neo4j",
+      "verdict": "partial_overlap"
+    },
+    {
+      "id": 91,
+      "name": "NotebookLM",
+      "category": "AI, Research and Media-native",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.05,
+      "our_evidence_quote": null,
+      "our_source_url": "https://docs.cloud.google.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/notebook_lm",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 71,
+      "name": "Notion",
+      "category": "Productivity and Project Management",
+      "composio_auth": [
+        "OAUTH2",
+        "API_KEY"
+      ],
+      "our_auth": [
+        "OAUTH2",
+        "API_KEY",
+        "BEARER_TOKEN"
+      ],
+      "composio_normalized": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_normalized": [
+        "API_KEY",
+        "BEARER_TOKEN",
+        "OAUTH2"
+      ],
+      "our_confidence": 0.75,
+      "our_evidence_quote": "You can create and use a public connection without listing it.",
+      "our_source_url": "https://developers.notion.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/notion",
+      "verdict": "partial_overlap"
+    },
+    {
+      "id": 38,
+      "name": "Pinterest",
+      "category": "Marketing, Ads, Email and Social",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.25,
+      "our_evidence_quote": null,
+      "our_source_url": "https://developers.pinterest.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/pinterest_ads",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 17,
+      "name": "Plain",
+      "category": "Support and Helpdesk",
+      "composio_auth": [
+        "API_KEY"
+      ],
+      "our_auth": [
+        "API_KEY",
+        "BEARER_TOKEN"
+      ],
+      "composio_normalized": [
+        "API_KEY"
+      ],
+      "our_normalized": [
+        "API_KEY",
+        "BEARER_TOKEN"
+      ],
+      "our_confidence": 0.55,
+      "our_evidence_quote": "You will need an API key with the\ncustomer:read\npermission. See\nauthentication\nfor details on how to get an API key",
+      "our_source_url": "https://docs.plain.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/plain",
+      "verdict": "partial_overlap"
+    },
+    {
+      "id": 15,
+      "name": "Pylon",
+      "category": "Support and Helpdesk",
+      "composio_auth": [
+        "DCR_OAUTH"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.35,
+      "our_evidence_quote": null,
+      "our_source_url": "https://docs.usepylon.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/pylon_mcp",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 86,
+      "name": "QuickBooks",
+      "category": "Finance and Fintech",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.6,
+      "our_evidence_quote": "Set up your Intuit Developer Account and developer environment",
+      "our_source_url": "https://developer.intuit.com/app/developer/qbo/docs/get-started",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/quickbooks",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 89,
+      "name": "Ramp",
+      "category": "Finance and Fintech",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.15,
+      "our_evidence_quote": null,
+      "our_source_url": "https://docs.ramp.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/ramp",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 1,
+      "name": "Salesforce",
+      "category": "CRM and Sales",
+      "composio_auth": [
+        "OAUTH2",
+        "S2S_OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.35,
+      "our_evidence_quote": "Salesforce Developer Edition now includes Agentforce Vibes IDE, Claude Sonnet 4.5, and Hosted MCP Servers \u2013 all free.",
+      "our_source_url": "https://developer.salesforce.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/salesforce",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 44,
+      "name": "Salesforce Commerce Cloud",
+      "category": "Ecommerce",
+      "composio_auth": [
+        "OAUTH2",
+        "S2S_OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.1,
+      "our_evidence_quote": null,
+      "our_source_url": "https://developer.salesforce.com/docs/commerce",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/salesforce",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 70,
+      "name": "Sentry",
+      "category": "Developer, Infra and Data platforms",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [
+        "API_KEY"
+      ],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [
+        "API_KEY"
+      ],
+      "our_confidence": 0.55,
+      "our_evidence_quote": "Tutorial: Create a Sentry Authentication Token",
+      "our_source_url": "https://docs.sentry.io/api",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/sentry",
+      "verdict": "disagree"
+    },
+    {
+      "id": 41,
+      "name": "Shopify",
+      "category": "Ecommerce",
+      "composio_auth": [
+        "API_KEY",
+        "OAUTH2",
+        "S2S_OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.25,
+      "our_evidence_quote": null,
+      "our_source_url": "https://shopify.dev/docs",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/shopify",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 21,
+      "name": "Slack",
+      "category": "Communications and Messaging",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.35,
+      "our_evidence_quote": "Create your first Slack app quickly.",
+      "our_source_url": "https://slack.com/developers",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/slack",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 67,
+      "name": "Snowflake",
+      "category": "Developer, Infra and Data platforms",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.35,
+      "our_evidence_quote": "Getting a Trial Account",
+      "our_source_url": "https://docs.snowflake.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/snowflake",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 81,
+      "name": "Stripe",
+      "category": "Finance and Fintech",
+      "composio_auth": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_auth": [
+        "API_KEY"
+      ],
+      "composio_normalized": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_normalized": [
+        "API_KEY"
+      ],
+      "our_confidence": 0.85,
+      "our_evidence_quote": "You can view and manage your API keys in\nthe Stripe Dashboard\n.",
+      "our_source_url": "https://stripe.com/docs/api",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/stripe",
+      "verdict": "partial_overlap"
+    },
+    {
+      "id": 65,
+      "name": "Supabase",
+      "category": "Developer, Infra and Data platforms",
+      "composio_auth": [
+        "OAUTH2",
+        "API_KEY"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "API_KEY",
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.4,
+      "our_evidence_quote": null,
+      "our_source_url": "https://supabase.com/docs",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/supabase",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 27,
+      "name": "Telegram",
+      "category": "Communications and Messaging",
+      "composio_auth": [
+        "API_KEY"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "API_KEY"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.3,
+      "our_evidence_quote": "Page not found",
+      "our_source_url": "https://core.telegram.org/developers",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/telegram",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 62,
+      "name": "Vercel",
+      "category": "Developer, Infra and Data platforms",
+      "composio_auth": [
+        "API_KEY"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "API_KEY"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.4,
+      "our_evidence_quote": null,
+      "our_source_url": "https://vercel.com/docs/rest-api",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/vercel",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 99,
+      "name": "YouTube Transcript",
+      "category": "AI, Research and Media-native",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [
+        "API_KEY",
+        "BEARER_TOKEN"
+      ],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [
+        "API_KEY",
+        "BEARER_TOKEN"
+      ],
+      "our_confidence": 0.75,
+      "our_evidence_quote": "Get Started Free",
+      "our_source_url": "https://transcriptapi.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/youtube",
+      "verdict": "disagree"
+    },
+    {
+      "id": 11,
+      "name": "Zendesk",
+      "category": "Support and Helpdesk",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.15,
+      "our_evidence_quote": "It looks like the help centre that you\u2019re trying to reach no longer exists.",
+      "our_source_url": "https://developers.zendesk.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/zendesk",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 7,
+      "name": "Zoho CRM",
+      "category": "CRM and Sales",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.4,
+      "our_evidence_quote": "Sign up for free",
+      "our_source_url": "https://developers.zoho.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/zoho",
+      "verdict": "we_extracted_nothing"
+    },
+    {
+      "id": 23,
+      "name": "Zoho Cliq",
+      "category": "Communications and Messaging",
+      "composio_auth": [
+        "OAUTH2"
+      ],
+      "our_auth": [],
+      "composio_normalized": [
+        "OAUTH2"
+      ],
+      "our_normalized": [],
+      "our_confidence": 0.3,
+      "our_evidence_quote": "Sign up for free",
+      "our_source_url": "https://developers.zoho.com",
+      "composio_doc_url": "https://docs.composio.dev/toolkits/zoho",
+      "verdict": "we_extracted_nothing"
+    }
+  ]
+}
