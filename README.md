@@ -5,7 +5,7 @@ Take-home for the AI Product Ops Intern role at Composio. Researches 100 apps
 self-serve-vs-gated access, API surface, and agent-toolkit buildability —
 with the pipeline itself as the deliverable, not just the output table.
 
-**Live page:** _(fill in after GitHub Pages deploy)_
+**Live page:** https://maggie7745.github.io/composio-app-research/
 **This repo:** https://github.com/maggie7745/composio-app-research
 
 ## What's here
