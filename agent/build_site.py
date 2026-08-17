@@ -274,9 +274,10 @@ def main():
       </select>
       <span id="row-count" class="text-xs text-slate-500 self-center ml-auto"></span>
     </div>
-    <div class="overflow-x-auto rounded-lg border border-slate-800">
+    <p class="text-xs text-slate-500 mb-2">Scrolls inside this box — all 100 rows are here, filter or scroll to browse.</p>
+    <div class="overflow-auto rounded-lg border border-slate-800" style="max-height:420px">
       <table class="w-full text-sm" id="app-table">
-        <thead class="bg-slate-900/80 text-left text-xs text-slate-400 sticky top-0">
+        <thead class="bg-slate-900/95 text-left text-xs text-slate-400 sticky top-0 backdrop-blur">
           <tr>
             <th class="px-3 py-2">App</th><th class="px-3 py-2">Category</th><th class="px-3 py-2">What it does</th>
             <th class="px-3 py-2">Auth</th><th class="px-3 py-2">Access</th><th class="px-3 py-2">Buildable</th>
