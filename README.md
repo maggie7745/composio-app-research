@@ -8,6 +8,27 @@ with the pipeline itself as the deliverable, not just the output table.
 **Live page:** https://maggie7745.github.io/composio-app-research/
 **This repo:** https://github.com/maggie7745/composio-app-research
 
+## Results
+
+- **100/100 apps** researched; **61** already have a Composio toolkit (found
+  via Composio's public docs registry, no API key needed).
+- **Tier 2 (hand-verified, 22-app stratified sample):** 63.6% → **72.7%**
+  field accuracy, pass 1 → pass 2.
+- **Tier 1 (automated, cross-checked against Composio's own auth field, 58
+  registry apps):** exact-match agreement 10.3% → 12.1%; overlap rate
+  (any shared auth method — the fairer number, since Composio's field is a
+  terse one-liner that often omits a secondary method the vendor's own docs
+  document) 27.6% → **41.4%**.
+- The single biggest lever: a nav-shell docs-fetching bug (pages that fetch
+  fine but are only a table-of-contents shell, e.g. GitHub's docs index) was
+  root-caused during verification and fixed between passes — see
+  `agent/pass2_rules.md`.
+- Reported honestly, not smoothed over: pass 2 has one confirmed
+  **regression** (Amazon Selling Partner lost a correct auth answer it had in
+  pass 1) and several apps that still miss for a third, unfixed failure mode
+  (a real page, just not the auth-bearing one — Salesforce, Twilio, Shopify).
+  Full detail in `verification/sample_pass2.json`.
+
 ## What's here
 
 ```
